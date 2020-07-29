@@ -1,0 +1,17 @@
+retive single data from database 
+
+
+$query = "SELECT name
+        FROM   users
+   WHERE  username = 'rrr' ";
+
+if ($result = mysqli_query($link,$query)) {
+
+    /* fetch associative array */
+    while ($row = mysqli_fetch_assoc($result)) {
+        printf ("%s\n", $row["name"]);
+    }
+
+    /* free result set */
+    mysqli_free_result($result);
+}
