@@ -9,8 +9,7 @@ $username_err = "";$password_err =""; $confirm_password_err = "";
  $mobile = "";$mobile_err="";
 
 // Processing form data when form is submitted
-if($_SERVER["REQUEST_METHOD"] == "POST"){
- 
+
 
 	if(empty(trim($_POST["mobile"]))){
         $mobile_err = "Please enter Your MObile Num";
@@ -19,39 +18,41 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty(trim($_POST["username"])))
 	{
         $username_err = "Please enter a username.";
-		echo $username_err;
-    } 
+	}	
 	else
 	{
-		
-		$user=$_POST["username"];
-		echo $user;
-		$mob=$_POST["mobile"];
-		echo $mob;
-		$query = "SELECT username,phone FROM users WHERE username = '$user' AND '$mob' ";
-			if ($result = mysqli_query($link,$query)) 
-			{
-
+		$us = $_POST["username"]; 
+		$mob = $_POST["mobile"];
+		$database_username="";$database_phone="";
+		$flag = 0;
+				$query = "SELECT name,phone FROM   users WHERE  username = '$us' AND phone='$mob'";
+				if ($result = mysqli_query($link,$query)) {
+					echo "found";
 				/* fetch associative array */
 				while ($row = mysqli_fetch_assoc($result)) {
-					printf ("%s\n", $row["username"]);
-					printf ("%s\n", $row["phone"]);
+					
+					$database_username = $row["name"];
+					$database_phone = $row["phone"];
+					$flag = 0;
 							}
+							echo $flag;
 
-					mysqli_free_result($result);
-			}
-		else
-			{
-				
-             $username_err = "    This Username is not valid";
-			 echo $username_err;
-            }
-    } 
+    mysqli_free_result($result);
+	
+} // Close statement
 
-            // Close statement
+
+	echo $database_username ;
+	echo $database_phone;
+      if((strcmp($database_username,$us)==0)&&(strcmp($database_phone,$mob)==0))
+		  header("location: forgetpass.php");
+
+	}
+	
+
+
   
-        
-    }
+    
     
    
 

@@ -1,10 +1,73 @@
 <?php
-include "action_singup.php" ; 
-header('Content-Type: text/html; charset=utf-8');
+// Initialize the session
+
+ 
+ 
+// Include config file
+require_once "config.php";
+require_once "action_recovery.php"; 
+
+// Define variables and initialize with empty values
+$new_password = $confirm_password = "";
+$new_password_err = $confirm_password_err = "";
+ 
+// Processing form data when form is submitted
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+ 
+    // Validate new password
+    if(empty(trim($_POST["new_password"]))){
+        $new_password_err = "Please enter the new password.";     
+    } elseif(strlen(trim($_POST["new_password"])) < 3){
+        $new_password_err = "Password must have atleast 6 characters.";
+    } else{
+        $new_password = trim($_POST["new_password"]);
+    }
+    
+    // Validate confirm password
+    if(empty(trim($_POST["confirm_password"]))){
+        $confirm_password_err = "Please confirm the password.";
+    } else{
+        $confirm_password = trim($_POST["confirm_password"]);
+        if(empty($new_password_err) && ($new_password != $confirm_password)){
+            $confirm_password_err = "Password did not match.";
+        }
+    }
+        
+    // Check input errors before updating the database
+    if(empty($new_password_err) && empty($confirm_password_err)){
+        // Prepare an update statement
+        $sql = "UPDATE users SET password = ? WHERE username = ?";
+        
+        if($stmt = mysqli_prepare($link, $sql)){
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "ss", $param_password, $param_id);
+            
+            // Set parameters
+            $param_password = password_hash($new_password, PASSWORD_DEFAULT);
+            $param_id = $database_username;
+            
+            // Attempt to execute the prepared statement
+            if(mysqli_stmt_execute($stmt)){
+                // Password updated successfully. Destroy the session, and redirect to login page
+                header("location: index.php");
+                exit();
+            } else{
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            mysqli_stmt_close($stmt);
+        }
+    }
+    
+    // Close connection
+    mysqli_close($link);
+}
 ?>
+ 
 <html lang="en">
   <head>
-    <title>অ্যাকাউন্ট খুলুন</title>
+    <title>নতুন পাসওয়ার্ড</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -101,32 +164,24 @@ header('Content-Type: text/html; charset=utf-8');
 				
 					<div class="col-md-10 wrap-about2 align-items-centerd-flex">
 						<div class="ftco-animate bg-primary align-self-center px-4 py-5 w-100">
-							<h2  align="center" class="heading-white mb-4">পাসওয়ার্ড পুনরুদ্ধার</h2>
+							<h2  align="center" class="heading-white mb-4">নতুন পাসওয়ার্ড</h2>
 							
-							<form action="action_recovery.php" accept-charset="utf-8" method="post" class="appointment-form ftco-animate">
-							
-
-		    				<div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-								  <input type="text"  placeholder="username" name="username" class="form-control" value="<?php echo $username; ?>">
-								  <span class="help-block"><?php echo $username_err; ?></span>
-		    				</div>
-							
-							
-							<div class="form-group <?php echo (!empty($mobile_err)) ? 'has-error' : ''; ?>">
-		    					 <input type="text"  placeholder="Mobile" name="mobile" class="form-control" value="<?php echo $mobile; ?>">
-								 <span class="help-block"><?php echo $mobile_err; ?></span>
-		    				</div>
-								
-							<div class="form-group">
-		    					 <input type="text"  placeholder="email" name="email" class="form-control" value="<?php echo $email; ?>">
-							
-		    				</div>
-	    			
-	    		
-		            <div class="form-group">
-		              <input type="submit" value="CREATE" class="btn btn-secondary py-3 px-4">
-		            </div>
-		    			</form>
+							 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
+            <div class="form-group <?php echo (!empty($new_password_err)) ? 'has-error' : ''; ?>">
+                <label>New Password</label>
+                <input type="password" name="new_password" class="form-control" value="<?php echo $new_password; ?>">
+                <span class="help-block"><?php echo $new_password_err; ?></span>
+            </div>
+            <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password" class="form-control">
+                <span class="help-block"><?php echo $confirm_password_err; ?></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Submit">
+                <a class="btn btn-link" href="welcome.php">Cancel</a>
+            </div>
+        </form>
 						</div>
 					</div>
 	
