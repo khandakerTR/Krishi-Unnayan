@@ -1,7 +1,16 @@
-<?php ?>
+<?php
+
+include "action_contact.php";
+
+
+
+
+
+ 
+?>
 <html lang="en">
   <head>
-    <title>কৃষি উন্নয়ন</title>
+    <title>যোগাযোগ</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -102,7 +111,7 @@
 			          	<div class="icon">
 			          		<span class="icon-map-o"></span>
 			          	</div>
-			            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+			            <p><span>ঠিকানা:</span> মিরপুর ২ ,ঢাকা</p>
 			          </div>
 		          </div>
 		          <div class="col-md-4 text-center d-flex">
@@ -110,7 +119,7 @@
 			          	<div class="icon">
 			          		<span class="icon-tablet"></span>
 			          	</div>
-			            <p><span>Phone:</span> <a href="tel://1234567920">Call us: + 1235 2355 98</a></p>
+			             <p><span>ফোন:</span> <a href="tel://1234567920">০১৯৫১১৮৯৩৮৩</a></p>
 			          </div>
 		          </div>
 		          <div class="col-md-4 text-center d-flex">
@@ -118,7 +127,7 @@
 			          	<div class="icon">
 			          		<span class="icon-envelope-o"></span>
 			          	</div>
-			            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+			           <p><span>ইমেইল:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
 			          </div>
 		          </div>
 		        </div>
@@ -126,22 +135,26 @@
         </div>
         <div class="row block-9 justify-content-center mb-5">
           <div class="col-md-10 mb-md-5">
-          	<h2 class="text-center">If you got any questions <br>please do not hesitate to send us a message</h2>
-            <form action="#" class="border p-5 contact-form">
+          		<h2 class="text-center">যদি আপনার কোন প্রশ্ন / পরামর্শ থাকে<br>আমাদের একটি বার্তা প্রেরণ করুন</h2>
+  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"  class="border p-5 contact-form">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+                <input type="text" class="form-control" name="name" placeholder="নাম">
+				<span class="error"> <?php echo $nameErr;?></span>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
+                <input type="text" class="form-control" name="email" placeholder="ইমেইল ">
+				<span class="error"><?php echo $emailErr;?></span>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+                <input type="text" class="form-control"name="sub" placeholder="বিষয়  ">
+				<span class="error"><?php echo $subjectErr;?></span>
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                <textarea cols="30" rows="7" name="msg" class="form-control" placeholder="বার্তা"></textarea>
+				<span class="error"><?php echo $messageErr;?></span>
               </div>
               <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                <input type="submit" value="বার্তা পাঠান " class="btn btn-primary py-3 px-5">
               </div>
             </form>
           
@@ -152,16 +165,16 @@
 
 
 		
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
+       <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-6 col-lg-3">
             <div class="ftco-footer-widget mb-5">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<h2 class="ftco-heading-2">প্রশ্ন  ???</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text"> মিরপুর ২ ,ঢাকা</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">০১৯৫১১৪৯৩৪৩</span></a></li>
 	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
 	              </ul>
 	            </div>
@@ -174,19 +187,20 @@
           </div>
           <div class="col-md-6 col-lg-2">
             <div class="ftco-footer-widget mb-5 ml-md-4">
-              <h2 class="ftco-heading-2">Links</h2>
+              <h2 class="ftco-heading-2">লিংক</h2>
               <ul class="list-unstyled">
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Services</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Projects</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
+                <li><a href="index.php"><span class="ion-ios-arrow-round-forward mr-2"></span>হোম</a></li>
+                <li><a href="about.php"><span class="ion-ios-arrow-round-forward mr-2"></span>আমাদের সম্পর্কে</a></li>
+                <li><a href="team.php"><span class="ion-ios-arrow-round-forward mr-2"></span>বিশেষজ্ঞ </a></li>
+                <li><a href="services.php"><span class="ion-ios-arrow-round-forward mr-2"></span>পরামর্শ</a></li>
+				  <li><a href="singup.php"><span class="ion-ios-arrow-round-forward mr-2"></span>অ্যাকাউন্ট  খুলুন</a></li>
+                <li><a href="contact.php"><span class="ion-ios-arrow-round-forward mr-2"></span>যোগাযোগ</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-6 col-lg-4">
             <div class="ftco-footer-widget mb-5">
-              <h2 class="ftco-heading-2">Recent Blog</h2>
+              <h2 class="ftco-heading-2">সাম্প্রতিক ব্লগ</h2>
               <div class="block-21 mb-4 d-flex">
                 <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
                 <div class="text">
@@ -213,10 +227,10 @@
           </div>
           <div class="col-md-6 col-lg-3">
             <div class="ftco-footer-widget mb-5">
-            	<h2 class="ftco-heading-2">Subscribe Us!</h2>
+            	<h2 class="ftco-heading-2">আমাদের সাবস্ক্রাইব করুন!</h2>
               <form action="#" class="subscribe-form">
                 <div class="form-group">
-                  <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
+                  <input type="text" class="form-control mb-2 text-center" placeholder="ইমেইল দিন">
                   <input type="submit" value="Subscribe" class="form-control submit px-3">
                 </div>
               </form>

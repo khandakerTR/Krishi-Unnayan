@@ -1,16 +1,13 @@
 <?php
-// Initialize the session
 
- 
- 
+ session_start();
 // Include config file
 require_once "config.php";
-require_once "action_recovery.php"; 
-
+include "tempdata.php";
 // Define variables and initialize with empty values
 $new_password = $confirm_password = "";
 $new_password_err = $confirm_password_err = "";
- 
+ echo $database_username ;
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
@@ -44,13 +41,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             
             // Set parameters
             $param_password = password_hash($new_password, PASSWORD_DEFAULT);
-            $param_id = $database_username;
+            $param_id = $_SESSION['user'];
+			echo $param_id ;
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Password updated successfully. Destroy the session, and redirect to login page
+          
                 header("location: index.php");
-                exit();
+              //  exit();
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
             }
@@ -179,7 +178,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit">
-                <a class="btn btn-link" href="welcome.php">Cancel</a>
+                <a class="btn btn-link" href="index.php">Cancel</a>
             </div>
         </form>
 						</div>

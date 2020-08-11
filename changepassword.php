@@ -143,15 +143,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                          <?php 
 				$us = $_SESSION["username"]; 
+			
+			
 				$query = "SELECT name FROM   users WHERE  username = '$us' ";
 				if ($result = mysqli_query($link,$query)) {
+				
 					
 				/* fetch associative array */
 				while ($row = mysqli_fetch_assoc($result)) {
 					printf ("%s\n", $row["name"]);
+					
 							}
 
     mysqli_free_result($result);
+	
+	
+	
 } ?>                          
                    </button>
 				      <div class="dropdown-menu">
@@ -204,7 +211,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit">
-                <a class="btn btn-link" href="welcome.php">Cancel</a>
+                <a class="btn btn-link" href="profile.php">Cancel</a>
             </div>
         </form>
 						</div>

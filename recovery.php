@@ -1,10 +1,92 @@
 <?php
-include "action_singup.php" ; 
-header('Content-Type: text/html; charset=utf-8');
+
+
+// Include config file
+require_once "config.php";
+ header('Content-Type: text/html; charset=utf-8');
+ include "action_recovery.php";
+ /*
+$username = ""; $password = ""; $confirm_password = "";
+$username_err = "";$password_err =""; $confirm_password_err = "";
+ $email =""; $email_err= "";
+ $mobile = "";$mobile_err="";
+
+// Processing form data when form is submitted
+$flag1=0;
+$flag2=0;
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["mobile"])) {
+  $mobile_err = "Please enter Your MObile Num";
+  } else {
+   $mobile = test_input($_POST["mobile"]);
+  $flag1=1;
+   
+  }
+
+  if (empty($_POST["username"])) {
+    $username_err = "Please enter a username.";
+  } else {
+    $username = test_input($_POST["username"]);
+	$flag2=1;
+	
+  }
+
+  if (empty($_POST["email"])) {
+     $email_err = "Enter your mail address";
+  } else {
+    $email = test_input($_POST["email"]);
+  }
+
+
+}
+  
+
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
+  $query = "SELECT username,phone FROM   users WHERE  username = '$username' AND phone='$mobile'";
+  if ($flag1==1 && $flag2==1)
+  {
+  if ($result = mysqli_query($link,$query)) {
+	  
+	  
+	  /* fetch associative array 
+				while ($row = mysqli_fetch_assoc($result)) {
+					
+					$database_username = $row["username"];
+					$database_phone = $row["phone"];
+					
+							}
+						
+
+    mysqli_free_result($result);
+	echo $database_username ;
+	echo "</br>" ;
+	echo $database_phone ;
+	if((strcmp($database_username,$username)==0)&&(strcmp($database_phone,$mobile)==0))
+		  header("location: forgetpass.php");
+		 
+	  else
+		  echo "ERROR";
+
+	
+  
+  }
+  }
+					
+
+*/
+
 ?>
 <html lang="en">
   <head>
-    <title>অ্যাকাউন্ট খুলুন</title>
+    <title>পাসওয়ার্ড পুনরুদ্ধার</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -103,24 +185,21 @@ header('Content-Type: text/html; charset=utf-8');
 						<div class="ftco-animate bg-primary align-self-center px-4 py-5 w-100">
 							<h2  align="center" class="heading-white mb-4">পাসওয়ার্ড পুনরুদ্ধার</h2>
 							
-							<form action="action_recovery.php" accept-charset="utf-8" method="post" class="appointment-form ftco-animate">
+							<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"  class="appointment-form ftco-animate">
 							
 
-		    				<div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+		    				<div class="form-group">
 								  <input type="text"  placeholder="username" name="username" class="form-control" value="<?php echo $username; ?>">
-								  <span class="help-block"><?php echo $username_err; ?></span>
+								  <span class="error"> <?php echo $username_err;?></span>
 		    				</div>
 							
 							
-							<div class="form-group <?php echo (!empty($mobile_err)) ? 'has-error' : ''; ?>">
+							<div class="form-group">
 		    					 <input type="text"  placeholder="Mobile" name="mobile" class="form-control" value="<?php echo $mobile; ?>">
 								 <span class="help-block"><?php echo $mobile_err; ?></span>
 		    				</div>
 								
-							<div class="form-group">
-		    					 <input type="text"  placeholder="email" name="email" class="form-control" value="<?php echo $email; ?>">
-							
-		    				</div>
+						
 	    			
 	    		
 		            <div class="form-group">
