@@ -116,7 +116,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     	<div class="container py-3">
     		<div class="row no-gutters d-flex align-items-center align-items-stretch">
     			<div class="col-md-4 d-flex align-items-center py-4">
-    				<a class="navbar-brand" href="index.html">কৃষি উন্নয়ন<br><span>আছে  কৃষকের পাশে</span></br></a>
+    				<a class="navbar-brand" href="index.php">কৃষি উন্নয়ন<br><span>আছে  কৃষকের পাশে</span></br></a>
     			</div>
 	    		<div class="col-lg-8 d-block">
 		    		<div class="row d-flex">
