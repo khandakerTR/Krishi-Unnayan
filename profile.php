@@ -109,53 +109,26 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 					 
 				</div>
 
-	        	<li class="nav-item"><a href="./myinbox/index.php" class="nav-link">বার্তা পাঠান</a></li>
+	        	
 	        	<li class="nav-item"><a href="team.html" class="nav-link">বিশেষজ্ঞ</a></li>
 	        	<li class="nav-item"><a href="project.html" class="nav-link">পরামর্শ</a></li>
 	        	<li class="nav-item"><a href="calculate.php" class="nav-link">সেবা</a></li>
 				<li class="nav-item"><a href="contact.html" class="nav-link">যোগাযোগ</a></li>
-				<li class="nav-item"><a href="reset.php" class="nav-link">reset pass</a></li>
+		
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
     <!-- END nav -->
     
-    <section class="home-slider owl-carousel">
-      <div class="slider-item" style="background-image:url(images/bg_1.jpeg);">
-      	<div class="overlay"></div>
-        <div class="container">
-          <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
-          <div class="col-md-7 ftco-animate mb-md-5">
-          	<span class="subheading">tag ling</span>
-            <h1 class="mb-4">কৃষক বাঁচলে দেশ বাঁচবে</h1>
-            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Our Services</a></p>
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-2 bread">প্রোফাইল</h1>
+            
           </div>
-        </div>
-        </div>
-      </div>
-  <div class="slider-item" style="background-image:url(images/bg_3.jpg);">
-      	<div class="overlay"></div>
-        <div class="container">
-          <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
-          <div class="col-md-7 ftco-animate mb-md-5">
-          	<span class="subheading">tag</span>
-            <h1 class="mb-4">কৃষি এ দেশের অর্থনীতির মূল চালিকা শক্তি</h1>
-            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Our Services</a></p>
-          </div>
-        </div>
-        </div>
-      </div>
-      <div class="slider-item" style="background-image:url(images/bg_2.jpg);">
-      	<div class="overlay"></div>
-        <div class="container">
-          <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
-          <div class="col-md-7 ftco-animate mb-md-5">
-          	<span class="subheading">tag</span>
-            <h1 class="mb-4">আমাদের কৃষি আমাদের প্রাণ</h1>
-            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Our Services</a></p>
-          </div>
-        </div>
         </div>
       </div>
     </section>
@@ -163,75 +136,22 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-consult">
 			<div class="container">
 				<div class="row d-flex no-gutters align-items-stretch	consult-wrap">
-					<div class="col-md-5 wrap-about align-items-stretch d-flex">
-						<div class="ftco-animate bg-primary align-self-stretch px-4 py-5 w-100">
-							<h2 align="center" class="heading-white mb-4" >লগ ইন করুন</h2>
-							<form action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="appointment-form ftco-animate">
-		    				            <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                <input type="text" name="username"  placeholder="username" class="form-control" value="<?php echo $username; ?>">
-                <span class="help-block"><?php echo $username_err; ?></span>
-            </div>    
-            <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-              
-                <input type="password" placeholder="password" name="password" class="form-control">
-                <span class="help-block"><?php echo $password_err; ?></span>
-            </div>
-
-	    					
-		            <div class="form-group">
-		              <input type="submit" value="LOG IN" class="btn btn-secondary py-3 px-4">
-		            </div>
-				<div class="accountButton">
-		        <a class="btn btn-default" href="singup.php" >অ্যাকাউন্ট খুলুন</a></div>
-				<div class="accountButton2">
-				<a class="btn btn-default" href="singup.php" >password vule gesen ???</a></div>
+				</div>	
+					
 			
-		    			</form>
-						</div>
-					</div>
-					<div class="col-md-7 wrap-about ftco-animate align-items-stretch d-flex">
-						<div class="bg-white p-5">
-							
-							<div class="row">
-								<div class="col-lg-6">
-									<div class="services">
-										<div class="icon mt-2 d-flex align-items-center"><span class="flaticon-collaboration"></span></div>
-										<div class="text media-body">
-											<h4>সার্বক্ষনিক সেবা</h4>
-											<p>স্ফেসেয়িক এassssssssssssssssssssssssss</br>sssssssssssssssssssssক্সতস্রর</br>sssssssssssssssssssssক্সতস্রর</br>sssssssssssssssssssssক্সতস্রর</br>sssssssssssssssssssssক্সতস্রর</p>
-										</div>
-									</div>
-									<div class="services">
-										<div class="icon mt-2"><span class="flaticon-analysis"></span></div>
-										<div class="text media-body">
-											<h4>আপনার সমস্যা আমাদের সমাধান</h4>
-											<p>স্রতস্রহ</br>sssssssssssssssssssssক্সতস্রর</br>sssssssssssssssssssssক্সতস্রর</br>sssssssssssssssssssssক্সতস্রর</br>sssssssssssssssssssssক্সতস্রর</br>sssssssssssssssssssssক্সতস্রর</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="services">
-										<div class="icon mt-2"><span class="flaticon-search-engine"></span></div>
-										<div class="text media-body">
-											<h4>সঠিক দিক নির্দেশনা উচ্চ ফলন</h4>
-											<p>্রতেতেত</p>
-										</div>
-									</div>
-									<div class="services">
-										<div class="icon mt-2"><span class="flaticon-handshake"></span></div>
-										<div class="text media-body">
-											<h4>সমন্বয়</h4>
-											<p>তগযক্সত্যিচ্য.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-	
+				<button type="button" onclick="location.href='./myinbox/index.php';" style="width:150px;height:100px;background-color:DodgerBlue"> বার্তা পাঠান</button> 
+				<button type="button" onclick="location.href='calculate.php';" style="width:150px;height:100px;background-color:DodgerBlue"> সারের পরিমাণ</button> 
+				<button type="button" onclick="location.href='calculate.php';" style="width:150px;height:100px;background-color:DodgerBlue"> তথ্য পরিবর্তন</button> 
+				<button type="button" onclick="location.href='calculate.php';" style="width:150px;height:100px;background-color:DodgerBlue"> button1</button>
+				<button type="button" onclick="location.href='calculate.php';" style="width:150px;height:100px;background-color:DodgerBlue"> button1</button> 
+				<button type="button" onclick="location.href='changepassword.php';" style="width:150px;height:100px;background-color:DodgerBlue"> পাসওয়ার্ড পরিবর্তন</button> 
+				<button type="button" onclick="location.href='logout.php';" style="width:150px;height:100px;background-color:tomato"> লগ আউট</button> 
+				
+				
 		
+				
+			</div>
+
 		<section class="ftco-intro ftco-no-pb img" style="background-image: url(images/bg_3.jpg);">
     	
     </footer>
