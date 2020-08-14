@@ -1,28 +1,44 @@
 <?php
-// Initialize the session
-include "config.php";
+$nm;
+$vl;
+$di;
+$ds;
+$th;
+$po;
+$ph;
+$em;
 session_start();
- 
-// Check if the user is logged in, if not then redirect him to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-	echo hello;
-    header("location: login.php");
-    exit;
-}
+include "config.php";
+header('Content-Type: text/html; charset=utf-8');
+$us = $_SESSION["username"]; 
+				$query = "SELECT name,village,division,district,thana,post,phone,eamil FROM   users WHERE  username = '$us' ";
+				if ($result = mysqli_query($link,$query)) {
+					
+				/* fetch associative array */
+				while ($row = mysqli_fetch_assoc($result)) {
+				$nm=$row["name"];
+				$vl=$row["village"];
+				$di=$row["division"];
+				$ds=$row["district"];
+				$th=$row["thana"];
+				$po=$row["post"];
+				$ph=$row["phone"];
+				$em=$row["eamil"];
+				
+						}
 
-
-
-
+    mysqli_free_result($result);
+				}
 
 
 
 ?>
 <html lang="en">
   <head>
-    <title>কৃষি উন্নয়ন</title>
+    <title>তথ্য দেখুন</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
+    
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
@@ -45,7 +61,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     	<div class="container py-3">
     		<div class="row no-gutters d-flex align-items-center align-items-stretch">
     			<div class="col-md-4 d-flex align-items-center py-4">
-    				<a class="navbar-brand" href="index.html">কৃষি উন্নয়ন<br><span>আছে  কৃষকের পাশে</span></br></a>
+    				<a class="navbar-brand" href="index.php">কৃষি উন্নয়ন<br><span>আছে  কৃষকের পাশে</span></br></a>
     			</div>
 	    		<div class="col-lg-8 d-block">
 		    		<div class="row d-flex">
@@ -86,48 +102,26 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </form>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav mr-auto">
-	        
-<div class="btn-group">
-	               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                         <?php 
-				$us = $_SESSION["username"]; 
-				$query = "SELECT name FROM   users WHERE  username = '$us' ";
-				if ($result = mysqli_query($link,$query)) {
-					
-				/* fetch associative array */
-				while ($row = mysqli_fetch_assoc($result)) {
-					printf ("%s\n", $row["name"]);
-							}
-
-    mysqli_free_result($result);
-} ?>                          
-                   </button>
-				      <div class="dropdown-menu">
-                       <a class="dropdown-item" href="logout.php">তথ্য পরিবর্তন</a>   
-				<a class="dropdown-item" href="logout.php">লগ আউট</a>  					   
-                     </div>
-					 
-				</div>
-
-	        	
-	        	<li class="nav-item"><a href="team.html" class="nav-link">বিশেষজ্ঞ</a></li>
-	        	<li class="nav-item"><a href="project.html" class="nav-link">পরামর্শ</a></li>
-	        	<li class="nav-item"><a href="calculate.php" class="nav-link">সেবা</a></li>
-				<li class="nav-item"><a href="contact.html" class="nav-link">যোগাযোগ</a></li>
-		
+	     	<li class="nav-item active"><a href="index.php" class="nav-link">হোম</a></li>
+	        	<li class="nav-item"><a href="about.php" class="nav-link">আমাদের সম্পর্কে</a></li>
+	        	<li class="nav-item"><a href="team.php" class="nav-link">বিশেষজ্ঞ</a></li>
+	        	<li class="nav-item"><a href="services.php" class="nav-link">পরামর্শ</a></li>
+				<li class="nav-item"><a href="singup.php" class="nav-link">অ্যাকাউন্ট খুলুন</a></li>
+				<li class="nav-item"><a href="contact.php" class="nav-link">যোগাযোগ</a></li>
+			  </a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
     <!-- END nav -->
     
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');">
+    	    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
             <h1 class="mb-2 bread">প্রোফাইল</h1>
-            
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">তথ্য দেখুন <i class="ion-ios-arrow-forward"></i></a></span> </p>
           </div>
         </div>
       </div>
@@ -135,23 +129,55 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-consult">
 			<div class="container">
-				<div class="row d-flex no-gutters align-items-stretch	consult-wrap">
-				</div>	
-					
-			
-				<button type="button" onclick="location.href='./myinbox/index.php';" style="width:150px;height:100px;background-color:DodgerBlue"> বার্তা পাঠান</button> 
-				<button type="button" onclick="location.href='calculate.php';" style="width:150px;height:100px;background-color:DodgerBlue"> সারের পরিমাণ</button> 
-				<button type="button" onclick="location.href='editprofile.php';" style="width:150px;height:100px;background-color:DodgerBlue"> তথ্য পরিবর্তন</button> 
-				<button type="button" onclick="location.href='calculate.php';" style="width:150px;height:100px;background-color:DodgerBlue"> button1</button>
-				<button type="button" onclick="location.href='calculate.php';" style="width:150px;height:100px;background-color:DodgerBlue"> button1</button> 
-				<button type="button" onclick="location.href='changepassword.php';" style="width:150px;height:100px;background-color:DodgerBlue"> পাসওয়ার্ড পরিবর্তন</button> 
-				<button type="button" onclick="location.href='logout.php';" style="width:150px;height:100px;background-color:tomato"> লগ আউট</button> 
 				
-				
-		
+					<div class="col-md-10 wrap-about2 align-items-centerd-flex">
+						<div class="ftco-animate bg-primary align-self-center px-4 py-5 w-100">
+						
+							<table  align="center" width="50%">  
+								  
+								<tr>    
+								<td align="right" style="font-size:20px;"><font style="color:blue">নামঃ</font></td>    
+								<td style="font-size:20px;"><input type="text"  value="<?php echo $nm; ?>" readonly="" /></td>  
+								</tr> 
+								
+								<tr>    
+								<td align="right"style="font-size:20px;"><font style="color:blue"> এলাকা/গ্রামঃ</font></td>   
+								<td style="font-size:20px;"><input type="text" value="<?php echo $vl; ?>" readonly="" /></td>  
+								</tr> 
+								
+								<tr>    
+								<td align="right" style="font-size:20px;"><font style="color:blue">বিভাগঃ</font></td>    
+								<td style="font-size:20px;"><input type="text-center" value="<?php echo $di; ?>" readonly=""  /></td>  
+								</tr>  
+								<tr>    
+								<td  align="right" style="font-size:20px;"><font style="color:blue">জেলাঃ</font></td>    
+								<td style="font-size:20px;"><input type="text" value="<?php echo $ds; ?>" readonly=""  /></td>  
+								</tr>  
+								<tr>    
+								<td  align="right" style="font-size:20px;"><font style="color:blue">থানাঃ</font></td>    
+								<td style="font-size:20px;"><input type="text" value="<?php echo $th;?>" readonly=""/></td>  
+								</tr>
+								<tr>    
+								<td align="right" style="font-size:20px;"><font style="color:blue">পোস্টঃ</font></td>    
+								<td style="font-size:20px;"><input type="text" value="<?php echo $po;?>" readonly=""  /></td>  
+								</tr>
+								<tr>    
+								<td align="right" style="font-size:20px;"><font style="color:blue">মোবাইলঃ</font></td>    
+								<td style="font-size:20px;"><input type="text" value="<?php echo $ph;?>" readonly=""  /></td>  
+								</tr>
+								<tr>    
+								<td align="right" style="font-size:20px;"><font style="color:blue">ই-মেইলঃ</font></td>    
+								<td style="font-size:20px;"><input type="text" value="<?php echo $em;?>" readonly=""  /></td>  
+								</tr>
+								</table>
+							
+						</div>
+					</div>
+	
 				
 			</div>
-
+		</section>
+		
 		<section class="ftco-intro ftco-no-pb img" style="background-image: url(images/bg_3.jpg);">
     	
     </footer>

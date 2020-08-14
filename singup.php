@@ -106,84 +106,80 @@ header('Content-Type: text/html; charset=utf-8');
 							<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" accept-charset="utf-8" method="post" class="appointment-form ftco-animate">
 							
 		    				<div class="form-group <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
-		    					  <input type="text"  placeholder="name" name="name" class="form-control" value="<?php echo $name; ?>">
-								  <span class="help-block"><?php echo $name_err; ?></span>
+		    					<input type="text"  placeholder="নাম" name="name" class="form-control" value="<?php echo $name; ?>" required>
+								<font style="color:blue">  <span class="help-block"><?php echo $name_err; ?></span> </font>  
 		    				</div>
 							
 							
 		    				<div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-								  <input type="text"  placeholder="username" name="username" class="form-control" value="<?php echo $username; ?>">
-								  <span class="help-block"><?php echo $username_err; ?></span>
+								  <input type="text"  placeholder="ইউজার নেম" name="username" class="form-control" value="<?php echo $username; ?>" required>
+									<font style="color:blue"><span class="help-block"><?php echo $username_err; ?></span> </font>
 		    				</div>
 							
 							<div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-		    					  <input type="password"  placeholder="password" name="password" class="form-control" value="<?php echo $password; ?>">
-								  <span class="help-block"><?php echo $password_err; ?></span>
+		    					  <input type="password"  placeholder="পাসওয়ার্ড" name="password" class="form-control" value="<?php echo $password; ?>" required>
+								  <font style="color:blue"><span class="help-block"><?php echo $password_err; ?></span> </font>
 		    				</div>
 							
 							
 							
 							<div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
-		    					  <input type="password"  placeholder="condrm pass" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>">
-								  <span class="help-block"><?php echo $confirm_password_err; ?></span>
+		    					  <input type="password"  placeholder="কনফার্ম পাসওয়ার্ড" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>"required>
+								<font style="color:blue"> <span class="help-block"><?php echo $confirm_password_err; ?></span> </font>
 		    				</div>
 							
 							<div class="form-group <?php echo (!empty($vill_err)) ? 'has-error' : ''; ?>">
-								  <input type="text"  placeholder="vill" name="vill" class="form-control" value="<?php echo $vill; ?>">
-								  <span class="help-block"><?php echo $vill_err; ?></span>
+								  <input type="text"  placeholder="গ্রাম/এলাকা" name="vill" class="form-control" value="<?php echo $vill; ?>"required>
+								<font style="color:blue"> <span class="help-block"><?php echo $vill_err; ?></span> </font>
 		    				</div>
 							
 							<div class="form-group <?php echo (!empty($div_err)) ? 'has-error' : ''; ?>">
-		    					 <input type="text"  placeholder="divisoin" name="div" class="form-control" value="<?php echo $div; ?>">
-								 <span class="help-block"><?php echo $div_err; ?></span>
+							<label  style="color:white">বিভাগ</label>
+
+										<select name="div" id="div" required>
+										 <option value="">--নির্বাচন করুন--</option>
+										  <option value="ঢাকা">ঢাকা</option>
+										  <option value="চট্টগ্রাম">চট্টগ্রাম</option>
+										  <option value="খুলনা">খুলনা</option>
+										  <option value="রাজশাহী">রাজশাহী</option>
+										  <option value="বরিশাল">বরিশাল</option>
+										  <option value="সিলেট"> সিলেট</option>
+										  <option value="রংপুর">রংপুর</option>
+										  <option value="সিলেট">সিলেট</option>
+										</select>
+		    					
+								<font style="color:blue"> <span class="help-block"><?php echo $div_err; ?></span> </font>
 		    				</div>
 							
 							
 							<div class="form-group <?php echo (!empty($dist_err)) ? 'has-error' : ''; ?>">
-		    					 <input type="text"  placeholder="district" name="dist" class="form-control" value="<?php echo $dist; ?>">
-								 <span class="help-block"><?php echo $dist_err; ?></span>
+		    					 <input type="text"  placeholder="জেলা" name="dist" class="form-control" value="<?php echo $dist; ?>"required>
+								 <font style="color:blue"> <span class="help-block"><?php echo $dist_err; ?></span></font>
 		    				</div>
 							
 							<div class="form-group <?php echo (!empty($thana_err)) ? 'has-error' : ''; ?>">
-		    					 <input type="text"  placeholder="thana" name="thana" class="form-control" value="<?php echo $thana; ?>">
-								 <span class="help-block"><?php echo $thana_err; ?></span>
+		    					 <input type="text"  placeholder="থানা" name="thana" class="form-control" value="<?php echo $thana; ?>"required>
+								<font style="color:blue"> <span class="help-block"><?php echo $thana_err; ?></span></font>
 		    				</div>
 							
 							<div class="form-group <?php echo (!empty($posto_err)) ? 'has-error' : ''; ?>">
-		    					 <input type="text"  placeholder="post" name="posto" class="form-control" value="<?php echo $posto; ?>">
-								 <span class="help-block"><?php echo $posto_err; ?></span>
+		    					 <input type="text"  placeholder="পোষ্ট অফিস" name="posto" class="form-control" value="<?php echo $posto; ?>"required>
+								 <font style="color:blue"> <span class="help-block"><?php echo $posto_err; ?></span> </font>
 		    				</div>
 							
 							<div class="form-group <?php echo (!empty($mobile_err)) ? 'has-error' : ''; ?>">
-		    					 <input type="text"  placeholder="Mobile" name="mobile" class="form-control" value="<?php echo $mobile; ?>">
-								 <span class="help-block"><?php echo $mobile_err; ?></span>
+		    					 <input type="text"  placeholder="মোবাইল  নাম্বার" name="mobile" class="form-control" value="<?php echo $mobile; ?>"required>
+								<font style="color:blue">  <span class="help-block"><?php echo $mobile_err; ?></span> </font>
 		    				</div>
-							
-	
 							<div class="form-group">
-		    					 <input type="text"  placeholder="jomir poriman" name="jomi" class="form-control" value="<?php echo $jomi; ?>">
-		    				</div>
 							
-							<div class="form-group">
-							<label for="cars">Choose a car:</label>
-							  <select name="cars" id="cars">
-							  <option value=" "></option>
-						<option value="volvo">Volvo</option>
-    <option value="saab">Saab</option>
-    <option value="opel">Opel</option>
-    <option value="audi">Audi</option>
-  </select>
-		    					 <input type="text"  placeholder="foshol" name="item" class="form-control" value="<?php echo $item; ?>">
-		    				</div>
-							
-							<div class="form-group">
-		    					 <input type="text"  placeholder="email" name="email" class="form-control" value="<?php echo $email; ?>">
-							
+		    					 <input type="text"  placeholder="ই-মেইল" name="email" class="form-control" value="<?php echo $email; ?>">
+							<font style="color:black">**যদি থাকে**</font>
 		    				</div>
 	    			
 	    		
 		            <div class="form-group">
-		              <input type="submit" value="CREATE" class="btn btn-secondary py-3 px-4">
+		              <input type="submit" value="খুলুন" class="btn btn-secondary py-3 px-4">
 		            </div>
 		    			</form>
 						</div>
