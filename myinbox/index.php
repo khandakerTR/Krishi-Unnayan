@@ -37,6 +37,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </head>
 <body onload="ajax();">
 	<h2 align="center" style="border-bottom: 1px solid grey;"> MY INBOX</h2>
+	<marquee  >Scrolling text</marquee>
 	<div class="ibox-content">
         <div class="row">
             <div style="margin-left: 10%;" class=" col-md-10">

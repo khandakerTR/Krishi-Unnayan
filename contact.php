@@ -127,7 +127,7 @@ include "action_contact.php";
 			          	<div class="icon">
 			          		<span class="icon-envelope-o"></span>
 			          	</div>
-			           <p><span>ইমেইল:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+			           <p><span>ইমেইল:</span> <a href="mailto:info@yoursite.com">khandaker3047@gmail.com</a></p>
 			          </div>
 		          </div>
 		        </div>
@@ -175,7 +175,7 @@ include "action_contact.php";
 	              <ul>
 	                <li><span class="icon icon-map-marker"></span><span class="text"> মিরপুর ২ ,ঢাকা</span></li>
 	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">০১৯৫১১৪৯৩৪৩</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">khandaker3047@gmail.com</span></a></li>
 	              </ul>
 	            </div>
 	            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
@@ -204,7 +204,7 @@ include "action_contact.php";
               <div class="block-21 mb-4 d-flex">
                 <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
                 <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                  <h3 class="heading"><a href="#">সহজ ঋণ</a></h3>
                   <div class="meta">
                     <div><a href="#"><span class="icon-calendar"></span> Oct. 16, 2019</a></div>
                     <div><a href="#"><span class="icon-person"></span> Admin</a></div>
@@ -215,7 +215,7 @@ include "action_contact.php";
               <div class="block-21 mb-5 d-flex">
                 <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
                 <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                  <h3 class="heading"><a href="#">বন্যায় ক্ষতি</a></h3>
                   <div class="meta">
                     <div><a href="#"><span class="icon-calendar"></span> Oct. 16, 2019</a></div>
                     <div><a href="#"><span class="icon-person"></span> Admin</a></div>
@@ -241,7 +241,7 @@ include "action_contact.php";
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved কৃষি উন্নয়ন team</br>by</br> <a href="#" target="_blank">Nurul Amin Khandaker</a> || <a href="#">Nazmul Hasan</a> || <a href="#">Rokaiya Sultana</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
