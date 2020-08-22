@@ -65,7 +65,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	</div>
 	<?php
 		if(isset($_POST['submit'])){
-			$name = $_POST['name'];
+			$name = $_POST['idval'];
 			$message = $_POST['message'];
 			$admin = $_SESSION['username'];
 			$id=1;

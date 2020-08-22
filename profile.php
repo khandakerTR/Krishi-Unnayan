@@ -152,9 +152,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 				<div>
 			<button type="button" onclick="location.href='dhan.php';" style="width:150px;height:100px;background-color:DodgerBlue">ধান</button>
 				<button type="button" onclick="location.href='sobji.php';" style="width:150px;height:100px;background-color:DodgerBlue">সবজি</button> 
-				<button type="button" onclick="location.href='changepassword.php';" style="width:150px;height:100px;background-color:DodgerBlue">মসলা</button> 
-	<button type="button" onclick="location.href='calculate.php';" style="width:150px;height:100px;background-color:DodgerBlue">তেল</button> 
-	<button type="button" onclick="location.href='calculate.php';" style="width:150px;height:100px;background-color:DodgerBlue">ডাল</button> 
+				<button type="button" onclick="location.href='masala.php';" style="width:150px;height:100px;background-color:DodgerBlue">মসলা</button> 
+	<button type="button" onclick="location.href='tel.php';" style="width:150px;height:100px;background-color:DodgerBlue">তেল</button> 
+	<button type="button" onclick="location.href='dal.php';" style="width:150px;height:100px;background-color:DodgerBlue">ডাল</button> 
 			</div>
 		
 				

@@ -51,11 +51,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	</div>
 	<div style="background-color:white;" class="row">
      	<div style="margin-left: 20%;" class="col-md-8">
-			<form method="POST" action="action.php" accept-charset="utf-8">
+			<form method="POST" action="action.php" accept-charset="utf-8" enctype='multipart/form-data'>
 				<div></div>
 				
 				<textarea name="message" placeholder="Enter your message" required=""></textarea>
-				<input type="submit" style="color: white;" name="submit" value="Send it"/>
+				  <input type='file' name='file'>		
+				<input type="submit" style="color: white;" name="submit" value="Send it">
 			</form>
 		</div>
 	</div>
