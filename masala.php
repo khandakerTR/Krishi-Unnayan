@@ -1,4 +1,13 @@
-<?php ?>
+<?php 
+include "config.php";
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: masala.php");
+    exit;
+}
+?>
 <html lang="en">
   <head>
   <style type="text/css" media="all">
