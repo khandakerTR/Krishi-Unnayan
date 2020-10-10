@@ -132,44 +132,56 @@ $us = $_SESSION["username"];
 				
 					<div class="col-md-10 wrap-about2 align-items-centerd-flex">
 						<div class="ftco-animate bg-primary align-self-center px-4 py-5 w-100">
-						
+						<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" accept-charset="utf-8" method="post" class="appointment-form ftco-animate">
+
 							<table  align="center" width="50%">  
 								  
 								<tr>    
 								<td align="right" style="font-size:20px;"><font style="color:blue">নামঃ</font></td>    
-								<td style="font-size:20px;"><input type="text"  value="<?php echo $nm; ?>" readonly="" /></td>  
+								<td><input type="text"  placeholder="নাম" name="name"  value="<?php echo $nm; ?>" required></td>
 								</tr> 
 								
 								<tr>    
 								<td align="right"style="font-size:20px;"><font style="color:blue"> এলাকা/গ্রামঃ</font></td>   
-								<td style="font-size:20px;"><input type="text" value="<?php echo $vl; ?>" readonly="" /></td>  
+								<td><input type="text"  placeholder="গ্রাম/এলাকা" name="vill" value="<?php echo $vl; ?>"required></td>  
 								</tr> 
 								
-								<tr>    
+								<tr>  <!-- bivagh hobe -->  
 								<td align="right" style="font-size:20px;"><font style="color:blue">বিভাগঃ</font></td>    
-								<td style="font-size:20px;"><input type="text-center" value="<?php echo $di; ?>" readonly=""  /></td>  
+								<td><input type="text"  placeholder="জেলা" name="dist" value="<?php echo $di; ?>"required></td>  
 								</tr>  
+								
 								<tr>    
 								<td  align="right" style="font-size:20px;"><font style="color:blue">জেলাঃ</font></td>    
-								<td style="font-size:20px;"><input type="text" value="<?php echo $ds; ?>" readonly=""  /></td>  
+								<td><input type="text"  placeholder="জেলা" name="dist"  value="<?php echo $ds; ?>"required></td>  
 								</tr>  
+								
 								<tr>    
 								<td  align="right" style="font-size:20px;"><font style="color:blue">থানাঃ</font></td>    
-								<td style="font-size:20px;"><input type="text" value="<?php echo $th;?>" readonly=""/></td>  
+								<td><input type="text"  placeholder="থানা" name="thana"  value="<?php echo $th; ?>"required> </td>  
 								</tr>
 								<tr>    
 								<td align="right" style="font-size:20px;"><font style="color:blue">পোস্টঃ</font></td>    
-								<td style="font-size:20px;"><input type="text" value="<?php echo $po;?>" readonly=""  /></td>  
+								<td>  <input type="text"  placeholder="পোষ্ট অফিস" name="posto"  value="<?php echo $po; ?>"required></td>  
 								</tr>
 								<tr>    
 								<td align="right" style="font-size:20px;"><font style="color:blue">মোবাইলঃ</font></td>    
-								<td style="font-size:20px;"><input type="text" value="<?php echo $ph;?>" readonly=""  /></td>  
+								<td><input type="text"  placeholder="মোবাইল  নাম্বার" name="mobile"  value="<?php echo $ph; ?>"required></td>  
 								</tr>
 								<tr>    
 								<td align="right" style="font-size:20px;"><font style="color:blue">ই-মেইলঃ</font></td>    
-								<td style="font-size:20px;"><input type="text" value="<?php echo $em;?>" readonly=""  /></td>  
+								<td> <input type="text"  placeholder="ই-মেইল" name="email"  value="<?php echo $em; ?>"></td>  
 								</tr>
 								</table>
+										
+							
+		    		
+					
+	    		
+		            <div class="form-group">
+		              <input type="submit" value="পরিবর্তন করুন" class="btn btn-secondary py-3 px-4">
+		            </div>
+		    			</form>
 							
 						</div>
 					</div>

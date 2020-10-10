@@ -8,7 +8,9 @@
 		$zipsam ;
 		$dosta  ;
 		$gobor;
-
+		$zinkS;
+		$borik;
+		$magnesianS;
 
 
 
@@ -254,23 +256,23 @@ if(isset($_POST['jat'])) 	{
 							  <table border="5" style="width:60%" height="75%">
                              <tr>
 							    <th>সারের নাম  </th>
-							    <th>মূল্য(প্রতি কেজি) </th>
+							    <th align = "center">মূল্য(প্রতি কেজি) </th>
 								<th>খরচ</th>
 							 </tr>  
 							<tr>						
-                            <td>ইউরিয়া </td>	<td align ="center">16</td> <td align ="left"><?php  print round($uria*16, 2);?>  টাকা </td>
+                            <td>ইউরিয়া </td>	<td align ="center">16</td> <td align ="left">--  টাকা </td>
 							</tr>
 							<tr>						
-                            <td>টি এস পি</td>   <td align ="center">22</td>     <td align ="left"><?php  print round($tsp*22, 2);?>  টাকা </td>
+                            <td>টি এস পি</td>   <td align ="center">22</td>     <td align ="left">-- টাকা </td>
 							</tr>
 							<tr>						
-                            <td>এমওপি  </td>    <td align ="center">27</td>     <td align ="left"><?php  print round($mop*27, 2);?>  টাকা </td>
+                            <td>এমওপি  </td>    <td align ="center">27</td>     <td align ="left">-- টাকা </td>
 							</tr>
 							<tr>						
-                            <td> গোবর </td>      <td align ="center">--</td>    <td align ="left"><?php  print round($gobor*0, 2);?>  টাকা </td>
+                            <td> গোবর </td>      <td align ="center">--</td>    <td align ="left">-- টাকা </td>
 							</tr>   
 							<tr>						
-                            <td>মোট</td>      <td></td>    <td align ="left"><?php  $tot=($uria*16)+($tsp*22)+($mop*27); print round($tot, 2);?>  টাকা </td>
+                            <td>মোট</td>      <td></td>    <td align ="left">-- টাকা </td>
 							</tr> 							
 							</table>
 						  	
@@ -332,34 +334,37 @@ if(isset($_POST['jat'])) 	{
         case '1':
 			//bigha
 
-	$uria = ((float)$number*350)/7.47 ; 
-	$tsp =  ((float)$number*300)/7.47;
-	$mop = ((float) $number*300)/7.47; 
-	//$zipsam =  (float)$number*15*(float)7.47 ;
-	//$dosta =  (float)$number*1.5*(float)7.47 ;
-	$gobor =  ((float)$number*10000)/7.47;	
+	$uria = (float) $number*180/7.47 ; 
+	$tsp =  (float)$number*150/7.47 ;
+	$mop = (float) $number*120/7.47; 
+	$zipsam =  (float)$number*150/7.47 ;
+	$zinkS =  (float)$number*8/7.47 ;
+	$borik =  (float)$number*10/7.47 ;
+	$magnesianS =  (float)$number*80/7.47;	
 		
             break;
         case '2':
            //shotangsho
 	
-		$uria = (float)$number*1.4 ;
-		$tsp = (float) $number*1.2 ;
-		$mop =  (float)$number*1.4;
-		//$zipsam =  (float)$number*15/33 ;
-		//$dosta =  (float)$select* (float)(1.55/33) ;
-        $gobor =  (float)$number*40;
+	$uria = (float) $number*180/247.10 ; 
+	$tsp =  (float)$number*150/247.10 ;
+	$mop = (float) $number*120/247.10; 
+	$zipsam =  (float)$number*150/247.10 ;
+	$zinkS =  (float)$number*8/247.10 ;
+	$borik =  (float)$number*10/247.10 ;
+	$magnesianS =  (float)$number*80/247.10;	
 		
 			break;
 			case '3':
 			//hector
    
-	$uria = (float) $number*350 ; 
-	$tsp =  (float)$number*300 ;
-	$mop = (float) $number*300; 
-	//$zipsam =  (float)$number*15*(float)7.47 ;
-	//$dosta =  (float)$number*1.5*(float)7.47 ;
-	$gobor =  (float)$number*10000;	
+	$uria = (float) $number*180 ; 
+	$tsp =  (float)$number*150 ;
+	$mop = (float) $number*120; 
+	$zipsam =  (float)$number*150 ;
+	$zinkS =  (float)$number*8 ;
+	$borik =  (float)$number*10 ;
+	$magnesianS =  (float)$number*80;	
             break;
         default:
           echo 'Plese select an option';
@@ -543,16 +548,16 @@ if(isset($_POST['jat'])) 	{
                             <td>এমওপিঃ  </td>         <td align ="left"><?php  print round($mop, 2);?> কেজি</td>
 							</tr>
 							<tr>						
-                            <td> জিপসাম </td>          <td align ="left"><?php  print round($gobor, 2);?> কেজি</td>
+                            <td> জিপসাম </td>          <td align ="left"><?php  print round($zipsam, 2);?> কেজি</td>
 							</tr>  
 							<tr>						
-                            <td> জিংক সালফেট </td>          <td align ="left"><?php  print round($gobor, 2);?> কেজি</td>
+                            <td> জিংক সালফেট </td>          <td align ="left"><?php  print round($zinkS, 2);?> কেজি</td>
 							</tr>  
 							<tr>						
-                            <td> বরিক এসিড </td>          <td align ="left"><?php  print round($gobor, 2);?> কেজি</td>
+                            <td> বরিক এসিড </td>          <td align ="left"><?php  print round($borik, 2);?> কেজি</td>
 							</tr>  
 							<tr>						
-                            <td>ম্যাগনেসিয়াম সালফেট </td>          <td align ="left"><?php  print round($gobor, 2);?> কেজি</td>
+                            <td>ম্যাগনেসিয়াম সালফেট </td>          <td align ="left"><?php  print round($magnesianS, 2);?> কেজি</td>
 							</tr>  
 							</table>
                               </p>
@@ -633,10 +638,19 @@ if(isset($_POST['jat'])) 	{
                             <td>এমওপি  </td>    <td align ="center">27</td>     <td align ="left"><?php  print round($mop*27, 2);?>  টাকা </td>
 							</tr>
 							<tr>						
-                            <td> গোবর </td>      <td align ="center">--</td>    <td align ="left"><?php  print round($gobor*0, 2);?>  টাকা </td>
+                            <td>জিপসাম </td>      <td align ="center">8</td>    <td align ="left"><?php  print round($zipsam*8, 2);?>  টাকা </td>
 							</tr>   
 							<tr>						
-                            <td>মোট</td>      <td></td>    <td align ="left"><?php  $tot=($uria*16)+($tsp*22)+($mop*27); print round($tot, 2);?>  টাকা </td>
+                            <td> জিংক সালফেট </td>      <td align ="center">35</td>    <td align ="left"><?php  print round($zinkS*35, 2);?>  টাকা </td>
+							</tr>  
+							<tr>						
+                            <td> বরিক এসিড </td>      <td align ="center">200</td>    <td align ="left"><?php  print round($borik*200, 2);?>  টাকা </td>
+							</tr>  
+							<tr>						
+                            <td>ম্যাগনেসিয়াম সালফেট </td>      <td align ="center">650</td>    <td align ="left"><?php  print round($magnesianS*650, 2);?>  টাকা </td>
+							</tr>  
+							<tr>						
+                            <td>মোট</td>      <td></td>    <td align ="left"><?php  $tot=($uria*16)+($tsp*22)+($mop*27)+($zipsam*8)+($zinkS*35)+($borik*200)+($magnesianS*650); print round($tot, 2);?>  টাকা </td>
 							</tr> 							
 							</table>
 						  	
@@ -706,40 +720,43 @@ if(isset($_POST['jat'])) 	{
 
 	 if ($jat==3)
 	{
-		//<option value="4">বাঁধা কপি</option>	
+		//<option value="3">sorisha </option>	
 		
 		switch ($type) {
         case '1':
 			//bigha
 
-		$uria = (float)$number*1*33 ;
-		$tsp = (float) $number*0.8*33;
-		$mop =  (float)$number*0.65*33;
-		//$zipsam =  (float)$number*15/33 ;
-		//$dosta =  (float)$select* (float)(1.55/33) ;
-        $gobor =  (float)$number*125*33;
+		$uria = (float)$number*1.2*33 ;
+		$tsp = (float) $number*0.65*33 ;
+		$mop =  (float)$number*0.35*33;
+		$zipsam =  (float)$number*0.65*33 ;
+		$zinkS =  (float)$number*0.02*33 ;
+		$borik =  (float)$number*0.025*33 ;
+        $gobor =  (float)$number*15*33;
 		
             break;
         case '2':
            //shotangsho
 	
-		$uria = (float)$number*1 ;
-		$tsp = (float) $number*0.8 ;
-		$mop =  (float)$number*0.65;
-		//$zipsam =  (float)$number*15/33 ;
-		//$dosta =  (float)$select* (float)(1.55/33) ;
-        $gobor =  (float)$number*125;
+		$uria = (float)$number*1.2 ;
+		$tsp = (float) $number*0.65 ;
+		$mop =  (float)$number*0.35;
+		$zipsam =  (float)$number*0.65 ;
+		$zinkS =  (float)$number*0.02 ;
+		$borik =  (float)$number*0.025 ;
+        $gobor =  (float)$number*15;
 		
 			break;
 			case '3':
 			//hector
    
-	$uria = (float)$number*1*33*7.47 ;
-		$tsp = (float) $number*0.8*33*7.47;
-		$mop =  (float)$number*0.65*33*7.47;
-		//$zipsam =  (float)$number*15/33 ;
-		//$dosta =  (float)$select* (float)(1.55/33) ;
-        $gobor =  (float)$number*125*33*7.47;
+		$uria = (float)$number*1.2*247.1 ;
+		$tsp = (float) $number*0.65*247.1 ;
+		$mop =  (float)$number*0.35*247.1;
+		$zipsam =  (float)$number*0.65*247.1 ;
+		$zinkS =  (float)$number*0.02*247.1 ;
+		$borik =  (float)$number*0.025*247.1 ;
+        $gobor =  (float)$number*15*247.1;
             break;
         default:
           echo 'Plese select an option';
@@ -858,7 +875,7 @@ if(isset($_POST['jat'])) 	{
 						    <a class="nav-link py-4" data-toggle="tab" href="#services-2"><span class="flaticon-business mr-2"></span>বপন পদ্ধতি সময়</a>
 						  </li>
 						  <li class="nav-item text-left">
-						    <a class="nav-link py-4" data-toggle="tab" href="#services-3"><span class="flaticon-insurance mr-2"></span>নিড়ানী দেয়া</a>
+						    <a class="nav-link py-4" data-toggle="tab" href="#services-3"><span class="flaticon-insurance mr-2"></span>বপন পদ্ধতি:</a>
 						  </li>
 						  <li class="nav-item text-left">
 						    <a class="nav-link py-4" data-toggle="tab" href="#services-4"><span class="flaticon-insurance mr-2"></span>সেচ প্রয়োগ</a>
@@ -873,7 +890,7 @@ if(isset($_POST['jat'])) 	{
 						    <a class="nav-link py-4" data-toggle="tab" href="#services-7"><span class="flaticon-business mr-2"></span>পরজীবী উদ্ভিদজনিত রোগ</a>
 						  </li>
 						   <li class="nav-item text-left">
-						    <a class="nav-link py-4" data-toggle="tab" href="#services-7"><span class="flaticon-search-engine mr-2"></span>খরচ</a>
+						    <a class="nav-link py-4" data-toggle="tab" href="#services-8"><span class="flaticon-search-engine mr-2"></span>খরচ</a>
 						  </li>
 						</ul>
 					</div>
@@ -1062,13 +1079,22 @@ if(isset($_POST['jat'])) 	{
                             <td>এমওপিঃ  </td>         <td align ="left"><?php  print round($mop, 2);?> কেজি</td>
 							</tr>
 							<tr>						
-                            <td> গোবরঃ </td>          <td align ="left"><?php  print round($gobor, 2);?> কেজি</td>
+                            <td>জিপসামঃ  </td>         <td align ="left"><?php  print round($zipsam, 2);?> কেজি</td>
+							</tr>
+							<tr>						
+                            <td>জিংক সালফেটঃ    </td>         <td align ="left"><?php  print round($zinkS, 2);?> কেজি</td>
+							</tr>
+							<tr>						
+                            <td>বরিক এসিডঃ   </td>         <td align ="left"><?php  print round($borik, 2);?> কেজি</td>
+							</tr>
+							<tr>						
+                            <td> গোবরঃ </td>          <td align ="left"><?php  print round($gobor, 2);?> টন</td>
 							</tr>                          
 							</table>
 							সম্পূর্র্ণ গোবর ও টিএসপি সার জমি তৈরির সময় প্রয়োগ করতে হবে। ইউরিয়া ও এমওপি সার ২ কিসি-তে চারা রোপণের ২০-২৫ দিন পর একবার এবং ৩০-৪০ দিন পর আর একবার উপরি প্রয়োগ করতে হবে। সার দেয়ার পর পরই সেচ দিতে হবে। 
 							এ ছাড়া ২-৩ দিন পর পরই সেচ দিতে হবে। গাছ বড় হবার সাথে সাথে দুই সারির মাঝখান থেকে মাটি তুলে সারি বরাবর আইলের মত করে দিতে হবে। ফলে দু’সারির মাঝে নালা তৈরি হবে। এতে সেচ দিতে বেশ সুবিধে হবে।
 						  </div>
-						  <div class="tab-pane container p-0 fade" id="services-6">
+						  <div class="tab-pane container p-0 fade" id="services-8">
 						  	
 						  	<h4><a href="#">খরচ</a></h4>
 							  <table border="5" style="width:60%" height="75%">
@@ -1087,10 +1113,19 @@ if(isset($_POST['jat'])) 	{
                             <td>এমওপি  </td>    <td align ="center">27</td>     <td align ="left"><?php  print round($mop*27, 2);?>  টাকা </td>
 							</tr>
 							<tr>						
+                            <td>জিপসাম   </td>    <td align ="center">8</td>     <td align ="left"><?php  print round($zipsam*8, 2);?>  টাকা </td>
+							</tr>
+							<tr>						
+                            <td>জিংক সালফেট  </td>    <td align ="center">35</td>     <td align ="left"><?php  print round($zinkS*35, 2);?>  টাকা </td>
+							</tr>
+							<tr>						
+                            <td>বরিক এসিড  </td>    <td align ="center">200</td>     <td align ="left"><?php  print round($borik*200, 2);?>  টাকা </td>
+							</tr>
+							<tr>						
                             <td> গোবর </td>      <td align ="center">--</td>    <td align ="left"><?php  print round($gobor*0, 2);?>  টাকা </td>
 							</tr>   
 							<tr>						
-                            <td>মোট</td>      <td></td>    <td align ="left"><?php  $tot=($uria*16)+($tsp*22)+($mop*27); print round($tot, 2);?>  টাকা </td>
+                            <td>মোট</td>      <td></td>    <td align ="left"><?php  $tot=($uria*16)+($tsp*22)+($mop*27)+($zipsam*8)+($zinkS*35)+($borik*200); print round($tot, 2);?>  টাকা </td>
 							</tr> 							
 							</table>
 						  	

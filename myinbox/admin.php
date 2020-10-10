@@ -31,8 +31,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </head>
 <body onload="ajax();">
 
-	<h2 align="center" style="border-bottom: 1px solid grey;"> ADMIN PAGE</h2>
-	<h1 align="center">Hi,<b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to admin panel.</h1>
+	<h2 align="center" style="border-bottom: 1px solid grey;"> Super User PAGE</h2>
+	<h1 align="center">Hi,<b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to your Dashboard.</h1>
 	<div class="ibox-content">
         <div class="row">
             <div style="margin-left: 10%;" class=" col-md-10">
@@ -60,7 +60,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	</div>
 	
 	<div class="footer">
-	Developed by : <a href="admin.php">KRISHI UNNAYAN TEAM</a>
+	Developed by : <a href="admin.php">e-KRISHI SEBA TEAM</a>
 	<button align= "center" type="button" onclick="location.href='adminlogout.php';" style="width:150px;height:100px;background-color:tomato"> লগ আউট</button> 
 	</div>
 	<?php

@@ -110,8 +110,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 				</div>
 
 	        	
-	        	<li class="nav-item"><a href="team.html" class="nav-link">বিশেষজ্ঞ</a></li>
-	        	<li class="nav-item"><a href="project.html" class="nav-link">পরামর্শ</a></li>
+	        	<li class="nav-item"><a href="team.php" class="nav-link">বিশেষজ্ঞ</a></li>
+	        	<li class="nav-item"><a href="services.php" class="nav-link">পরামর্শ</a></li>
 	        	<li class="nav-item"><a href="calculate.php" class="nav-link">সেবা</a></li>
 				<li class="nav-item"><a href="contact.html" class="nav-link">যোগাযোগ</a></li>
 		

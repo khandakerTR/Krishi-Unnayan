@@ -36,7 +36,7 @@ include "action_contact.php";
     	<div class="container py-3">
     		<div class="row no-gutters d-flex align-items-center align-items-stretch">
     			<div class="col-md-4 d-flex align-items-center py-4">
-    				<a class="navbar-brand" href="index.php">কৃষি উন্নয়ন<br><span>আছে  কৃষকের পাশে</span></br></a>
+    				<a class="navbar-brand" href="index.php">ই-কৃষি সেবা<br><span>আছে  কৃষকের পাশে</span></br></a>
     			</div>
 	    		<div class="col-lg-8 d-block">
 		    		<div class="row d-flex">
@@ -202,7 +202,7 @@ include "action_contact.php";
             <div class="ftco-footer-widget mb-5">
               <h2 class="ftco-heading-2">সাম্প্রতিক ব্লগ</h2>
               <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+                <a class="blog-img mr-4" style="background-image: url(images/rin.png);"></a>
                 <div class="text">
                   <h3 class="heading"><a href="#">সহজ ঋণ</a></h3>
                   <div class="meta">
@@ -213,7 +213,7 @@ include "action_contact.php";
                 </div>
               </div>
               <div class="block-21 mb-5 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+                <a class="blog-img mr-4" style="background-image: url(images/image_2.png);"></a>
                 <div class="text">
                   <h3 class="heading"><a href="#">বন্যায় ক্ষতি</a></h3>
                   <div class="meta">
@@ -241,7 +241,7 @@ include "action_contact.php";
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved কৃষি উন্নয়ন team</br>by</br> <a href="#" target="_blank">Nurul Amin Khandaker</a> || <a href="#">Nazmul Hasan</a> || <a href="#">Rokaiya Sultana</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved ই-কৃষি সেবা team</br>by</br> <a href="#" target="_blank">Nurul Amin Khandaker</a> || <a href="#">Nazmul Hasan</a> || <a href="#">Rokaiya Sultana</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>

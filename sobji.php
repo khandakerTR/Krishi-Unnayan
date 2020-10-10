@@ -42,7 +42,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     	<div class="container py-3">
     		<div class="row no-gutters d-flex align-items-center align-items-stretch">
     			<div class="col-md-4 d-flex align-items-center py-4">
-    				<a class="navbar-brand" href="index.php">কৃষি উন্নয়ন<br><span>আছে  কৃষকের পাশে</span></br></a>
+    				<a class="navbar-brand" href="index.php">কই-কৃষি সেবা<br><span>আছে  কৃষকের পাশে</span></br></a>
     			</div>
 	    		<div class="col-lg-8 d-block">
 		    		<div class="row d-flex">
@@ -82,13 +82,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           </div>
         </form>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav mr-auto">
-	        	<li class="nav-item active"><a href="index.php" class="nav-link">হোম</a></li>
-	        	<li class="nav-item"><a href="about.php" class="nav-link">আমাদের সম্পর্কে</a></li>
-	        	<li class="nav-item"><a href="team.php" class="nav-link">বিশেষজ্ঞ</a></li>
-	        	<li class="nav-item"><a href="services.php" class="nav-link">পরামর্শ</a></li>
-				<li class="nav-item"><a href="contact.php" class="nav-link">যোগাযোগ</a></li>
-	        </ul>
+
 	      </div>
 	    </div>
 	  </nav>

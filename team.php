@@ -1,7 +1,7 @@
 <?php ?>
 <html lang="en">
   <head>
-    <title>কৃষি উন্নয়ন</title>
+    <title>বিশেষজ্ঞ</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -27,7 +27,7 @@
     	<div class="container py-3">
     		<div class="row no-gutters d-flex align-items-center align-items-stretch">
     			<div class="col-md-4 d-flex align-items-center py-4">
-    				<a class="navbar-brand" href="index.php">কৃষি উন্নয়ন<br><span>আছে  কৃষকের পাশে</span></br></a>
+    				<a class="navbar-brand" href="index.php">ই-কৃষি সেবা<br><span>আছে  কৃষকের পাশে</span></br></a>
     			</div>
 	    		<div class="col-lg-8 d-block">
 		    		<div class="row d-flex">
@@ -100,11 +100,11 @@
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff border">
 							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/s1.jpg);"></div>
+								<div class="img align-self-stretch" style="background-image: url(images/s1.png);"></div>
 							</div>
 							<div class="text pt-3 px-3 pb-4 text-center">
 								<h3>মোঃ আব্দুল মুইদ</h3>
-								<span class="position mb-2">মহাপরিচালক</span>
+								<span class="position mb-2">কৃষি অফিসার</span>
 								<div class="faded">
 									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
 									<ul class="ftco-social text-center">
@@ -120,11 +120,11 @@
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff border">
 							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/s2.jpg);"></div>
+								<div class="img align-self-stretch" style="background-image: url(images/s2.png);"></div>
 							</div>
 							<div class="text pt-3 px-3 pb-4 text-center">
 								<h3>আরিফ মোহাম্মদ মোজাক্কের</h3>
-								<span class="position mb-2"> বাবস্থাপক</span>
+								<span class="position mb-2"> কৃষি অফিসার</span>
 								<div class="faded">
 									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
 									<ul class="ftco-social text-center">
@@ -140,11 +140,11 @@
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff border">
 							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/s3.jpg);"></div>
+								<div class="img align-self-stretch" style="background-image: url(images/s3.png);"></div>
 							</div>
 							<div class="text pt-3 px-3 pb-4 text-center">
 								<h3>এ. বি. এম. বদরুজ্জামান</h3>
-								<span class="position mb-2">অধ্যাপক</span>
+								<span class="position mb-2">কৃষি অফিসার</span>
 								<div class="faded">
 									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
 									<ul class="ftco-social text-center">
@@ -160,11 +160,11 @@
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff border">
 							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/s4.jpg);"></div>
+								<div class="img align-self-stretch" style="background-image: url(images/s4.png);"></div>
 							</div>
 							<div class="text pt-3 px-3 pb-4 text-center">
 								<h3>ড. এম. সাহাব উদ্দিন</h3>
-								<span class="position mb-2">আর্থিক</span>
+								<span class="position mb-2">কৃষি অফিসার</span>
 								<div class="faded">
 									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
 									<ul class="ftco-social text-center">
@@ -181,11 +181,11 @@
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff border">
 							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/s5.jpg);"></div>
+								<div class="img align-self-stretch" style="background-image: url(images/s5.png);"></div>
 							</div>
 							<div class="text pt-3 px-3 pb-4 text-center">
 								<h3>ড. আলহাজ উদ্দিন আহাম্মেদ</h3>
-								<span class="position mb-2">অধ্যাপক</span>
+								<span class="position mb-2">কৃষি অফিসার</span>
 								<div class="faded">
 									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
 									<ul class="ftco-social text-center">
@@ -201,11 +201,11 @@
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff border">
 							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/s6.jpg);"></div>
+								<div class="img align-self-stretch" style="background-image: url(images/s6.png);"></div>
 							</div>
 							<div class="text pt-3 px-3 pb-4 text-center">
 								<h3>জাকিয়া বেগম</h3>
-								<span class="position mb-2">হিসাবরক্ষক</span>
+								<span class="position mb-2">কৃষি অফিসার</span>
 								<div class="faded">
 									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
 									<ul class="ftco-social text-center">
@@ -221,11 +221,11 @@
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff border">
 							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/s7.jpg);"></div>
+								<div class="img align-self-stretch" style="background-image: url(images/s7.png);"></div>
 							</div>
 							<div class="text pt-3 px-3 pb-4 text-center">
 								<h3>ড. মোঃ আজহার আলী</h3>
-								<span class="position mb-2">আর্থিক</span>
+								<span class="position mb-2">কৃষি অফিসার</span>
 								<div class="faded">
 									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
 									<ul class="ftco-social text-center">
@@ -241,11 +241,11 @@
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff border">
 							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/s8.jpg);"></div>
+								<div class="img align-self-stretch" style="background-image: url(images/s8.png);"></div>
 							</div>
 							<div class="text pt-3 px-3 pb-4 text-center">
-								<h3></h3>
-								<span class="position mb-2">অধ্যাপক</span>
+								<h3>নাজমুল হুদা</h3>
+								<span class="position mb-2">কৃষি অফিসার</span>
 								<div class="faded">
 									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
 									<ul class="ftco-social text-center">
@@ -321,7 +321,7 @@
             <div class="ftco-footer-widget mb-5">
               <h2 class="ftco-heading-2">সাম্প্রতিক ব্লগ</h2>
               <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+                <a class="blog-img mr-4" style="background-image: url(images/rin.png);"></a>
                 <div class="text">
                   <h3 class="heading"><a href="#">সহজ ঋণ</a></h3>
                   <div class="meta">
@@ -332,7 +332,7 @@
                 </div>
               </div>
               <div class="block-21 mb-5 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+                <a class="blog-img mr-4" style="background-image: url(images/image_2.png);"></a>
                 <div class="text">
                   <h3 class="heading"><a href="#">বন্যায় ক্ষতি</a></h3>
                   <div class="meta">
@@ -360,7 +360,7 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved কৃষি উন্নয়ন team</br>by</br> <a href="#" target="_blank">Nurul Amin Khandaker</a> || <a href="#">Nazmul Hasan</a> || <a href="#">Rokaiya Sultana</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved ই-কৃষি সেবা team</br>by</br> <a href="#" target="_blank">Nurul Amin Khandaker</a> || <a href="#">Nazmul Hasan</a> || <a href="#">Rokaiya Sultana</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>

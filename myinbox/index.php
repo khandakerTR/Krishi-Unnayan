@@ -36,8 +36,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	</script>
 </head>
 <body onload="ajax();">
-	<h2 align="center" style="border-bottom: 1px solid grey;"> MY INBOX</h2>
-	<marquee  >Scrolling text</marquee>
+	<h2 align="center" style="border-bottom: 1px solid grey;"> ইনবক্স</h2>
+	<h4 align="center" style="border-bottom: 1px solid grey;"><a href="../profile.php">প্রফাইল</a></h4>
+	<marquee  ><b>কৃষকের সাথে , কৃষকের পাঁশে, সর্বদা সবসময়য়</b></marquee>
 	<div class="ibox-content">
         <div class="row">
             <div style="margin-left: 10%;" class=" col-md-10">
@@ -54,14 +55,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			<form method="POST" action="action.php" accept-charset="utf-8" enctype='multipart/form-data'>
 				<div></div>
 				
-				<textarea name="message" placeholder="Enter your message" required=""></textarea>
+				<textarea name="message" placeholder="আপনার বার্তা লিখুন" required=""></textarea>
 				  <input type='file' name='file'>		
-				<input type="submit" style="color: white;" name="submit" value="Send it">
+				<input type="submit" style="color: white;" name="submit" value="প্রেরণ করুন">
 			</form>
 		</div>
 	</div>
 	<div class="footer">
-		Developed by : <a href="admin.php">KRISHI UNNAYAN TEAM</a>
+		Developed by : <a href="admin.php">ই-কৃষি সেবা টীম</a>
 	</div>
 	
 </body>

@@ -184,8 +184,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">পাসওয়ার্ড পুনরুদ্ধার</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Recover Password <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-2 bread">পাসওয়ার্ড পরিবর্তন</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Change Password <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
@@ -196,16 +196,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 				
 					<div class="col-md-10 wrap-about2 align-items-centerd-flex">
 						<div class="ftco-animate bg-primary align-self-center px-4 py-5 w-100">
-							<h2  align="center" class="heading-white mb-4">নতুন পাসওয়ার্ড</h2>
+							<h2  align="center" class="heading-white mb-4">নতুন পাসওয়ার্ড দিন</h2>
 							
 							 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
             <div class="form-group <?php echo (!empty($new_password_err)) ? 'has-error' : ''; ?>">
-                <label>New Password</label>
+                <label>নতুন পাসওয়ার্ড</label>
                 <input type="password" name="new_password" class="form-control" value="<?php echo $new_password; ?>">
                 <span class="help-block"><?php echo $new_password_err; ?></span>
             </div>
             <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
-                <label>Confirm Password</label>
+                <label>কনফার্ম পাসওয়ার্ড</label>
                 <input type="password" name="confirm_password" class="form-control">
                 <span class="help-block"><?php echo $confirm_password_err; ?></span>
             </div>

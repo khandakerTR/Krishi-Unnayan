@@ -90,7 +90,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 ?>
 <html lang="en">
   <head>
-    <title>কৃষি উন্নয়ন</title>
+    <title>ই-কৃষি সেবা</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -116,7 +116,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     	<div class="container py-3">
     		<div class="row no-gutters d-flex align-items-center align-items-stretch">
     			<div class="col-md-4 d-flex align-items-center py-4">
-    				<a class="navbar-brand" href="index.php">কৃষি উন্নয়ন<br><span>আছে  কৃষকের পাশে</span></br></a>
+    				<a class="navbar-brand" href="index.php">ই-কৃষি সেবা<br><span>আছে  কৃষকের পাশে</span></br></a>
     			</div>
 	    		<div class="col-lg-8 d-block">
 		    		<div class="row d-flex">
@@ -175,9 +175,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
           <div class="col-md-7 ftco-animate mb-md-5">
-          	<span class="subheading">tag ling</span>
+          	<span class="subheading"></span>
             <h1 class="mb-4">কৃষক বাঁচলে দেশ বাঁচবে</h1>
-            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Our Services</a></p>
+ 
           </div>
         </div>
         </div>
@@ -187,9 +187,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
           <div class="col-md-7 ftco-animate mb-md-5">
-          	<span class="subheading">tag</span>
+          	<span class="subheading"></span>
             <h1 class="mb-4">কৃষি এ দেশের অর্থনীতির মূল চালিকা শক্তি</h1>
-            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Our Services</a></p>
+            
           </div>
         </div>
         </div>
@@ -199,9 +199,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
           <div class="col-md-7 ftco-animate mb-md-5">
-          	<span class="subheading">tag</span>
+          	<span class="subheading"></span>
             <h1 class="mb-4">আমাদের কৃষি আমাদের প্রাণ</h1>
-            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Our Services</a></p>
+           
           </div>
         </div>
         </div>
@@ -216,12 +216,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 							<h2 align="center" class="heading-white mb-4" >লগ ইন করুন</h2>
 							<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="appointment-form ftco-animate">
 		    				            <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                <input type="text" name="username"  placeholder="username" class="form-control" value="<?php echo $username; ?>">
+                <input type="text" name="username"  placeholder="ইউজার নেম" class="form-control" value="<?php echo $username; ?>">
                 <span class="help-block"><?php echo $username_err; ?></span>
             </div>    
             <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
               
-                <input type="password" placeholder="password" name="password" class="form-control">
+                <input type="password" placeholder="পাসওয়ার্ড" name="password" class="form-control">
                 <span class="help-block"><?php echo $password_err; ?></span>
             </div>
 
@@ -246,14 +246,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 										<div class="icon mt-2 d-flex align-items-center"><span class="flaticon-collaboration"></span></div>
 										<div class="text media-body">
 											<h4>সার্বক্ষনিক সেবা</h4>
-											<p>স্ফেসেয়িক এassssssssssssssssssssssssss</br>sssssssssssssssssssssক্সতস্রর</br>sssssssssssssssssssssক্সতস্রর</br>sssssssssssssssssssssক্সতস্রর</br>sssssssssssssssssssssক্সতস্রর</p>
+											<p>আপনার যেকোনো কৃষি সংক্রান্ত সমস্যা সমাধানে  আমরা আছি সর্বক্ষণ আপনার সাথে ।</p>
 										</div>
 									</div>
 									<div class="services">
 										<div class="icon mt-2"><span class="flaticon-analysis"></span></div>
 										<div class="text media-body">
 											<h4>আপনার সমস্যা আমাদের সমাধান</h4>
-											<p>স্রতস্রহ</br>sssssssssssssssssssssক্সতস্রর</br>sssssssssssssssssssssক্সতস্রর</br>sssssssssssssssssssssক্সতস্রর</br>sssssssssssssssssssssক্সতস্রর</br>sssssssssssssssssssssক্সতস্রর</p>
+											<p>কৃষকের সমস্যাকে সর্বোচ্চ গুরুত্ব দিয়ে সমাধানে আমরা নিয়জিত</p>
 										</div>
 									</div>
 								</div>
@@ -262,14 +262,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 										<div class="icon mt-2"><span class="flaticon-search-engine"></span></div>
 										<div class="text media-body">
 											<h4>সঠিক দিক নির্দেশনা উচ্চ ফলন</h4>
-											<p>্রতেতেত</p>
+											<p>অর্থনীতিক দিক থেকে প্রযুক্তিগত উন্নয়ন অবহত রেখে শস্যের উচ্চ ফলন অর্জনের জন্য সঠিক দিক নির্দেশনা প্রদান</p>
 										</div>
 									</div>
 									<div class="services">
 										<div class="icon mt-2"><span class="flaticon-handshake"></span></div>
 										<div class="text media-body">
 											<h4>সমন্বয়</h4>
-											<p>তগযক্সত্যিচ্য.</p>
+											<p>কৃষক এবং কৃষি কর্মকর্তার দূরত্ব কমিয়ে আনার দৃঢ় প্রচেষ্টায়</p>
 										</div>
 									</div>
 								</div>
