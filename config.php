@@ -4,13 +4,13 @@ server with default setting (user 'root' with no password) */
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
-define('DB_NAME', 'REG');
+define('DB_NAME', 'krishi_unnayon');
  
 /* Attempt to connect to MySQL database */
 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
- echo "Initial character set is: " . $link -> character_set_name();
+ //echo "Initial character set is: " . $link -> character_set_name();
 $link -> set_charset("utf8");
-echo "Current character set is: " . $link -> character_set_name();
+//echo "Current character set is: " . $link -> character_set_name();
  
 // Check connection
 if($link === false){

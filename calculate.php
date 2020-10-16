@@ -194,7 +194,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	    			 <div class="wrap-about2">	
 		            <div class="form-group ">
                 <input type="submit" class="btn-success" value="Submit">
-                <input type="reset" class="btn btn-default" value="Reset">
+                <input type="reset" class="btn btn-default" value="Reset" style="color:red">
+				<a href="profile.php"> <font style="color:black">Back </font></a>
             </div>
 </div>
 			</form>
