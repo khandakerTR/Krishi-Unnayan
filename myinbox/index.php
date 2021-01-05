@@ -37,7 +37,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </head>
 <body onload="ajax();">
 	<h2 align="center" style="border-bottom: 1px solid grey;"> ইনবক্স</h2>
-	<h4 align="center" style="border-bottom: 1px solid grey;"><a href="../profile.php">প্রফাইল</a></h4>
+	<h4 align="center" style="border-bottom: 1px solid grey;"><a href="../profile/profile.php">প্রফাইল</a></h4>
 	<marquee  ><b>কৃষকের সাথে , কৃষকের পাঁশে, সর্বদা সবসময়য়</b></marquee>
 	<div class="ibox-content">
         <div class="row">

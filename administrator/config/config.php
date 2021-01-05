@@ -20,6 +20,7 @@ try {
     echo($ex->getMessage());
     die;}
 $link = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+$link -> set_charset("utf8");
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());} 
 ?>

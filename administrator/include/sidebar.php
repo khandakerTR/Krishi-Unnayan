@@ -33,12 +33,17 @@
          
               </ul>
             </li>
-			      <li class="treeview"><a href="#"><i class="fa fa-th-list"></i><span>Fertilizer Price</span><i class="fa fa-angle-right"></i></a>
-              <ul class="treeview-menu">
-                <li><a href="addInformation.php"><i class="fa fa-circle-o"></i>Update Price</a></li>
-         
-              </ul>
+			      <li class="treeview"><a href="fertilizerview.php"><i class="fa fa-th-list"></i><span>Fertilizer Price</span><i class="fa fa-angle-right"></i></a>
+           
             </li>
+			<li class="treeview"><a href="cropstype.php"><i class="fa fa-th-list"></i><span>Crops Type</span><i class="fa fa-angle-right"></i></a>
+           
+            </li>
+			<li class="treeview"><a href="addcrops.php"><i class="fa fa-th-list"></i><span>Add New Crops</span><i class="fa fa-angle-right"></i></a>
+           
+            </li>
+			
+			
 				<li><a href="makeadmin.php"><i class="fa fa-circle-o"></i> Create Admin</a></li>
           </ul>
         </section>

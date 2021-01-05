@@ -104,13 +104,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	<div id="form-wrapper" style="max-width:500px;margin:auto;">
 <form action="action_dhan.php" method = "POST">
 	<label  style="color:black">জাতঃ </label>
-
+									
 										<select name="jat" id="div" required>
 										 <option value="">--নির্বাচন করুন--</option>
-										  <option value="1">বিআর ৩</option>
-										  <option value="2">বিআর ১৯</option>
-										  <option value="3">ব্রি ধান ২৮</option>
-										</select>
+										 <?php $query = "SELECT * FROM dhan";
+									
+		 mysqli_query($link,'SET CHARACTER SET utf8');
+		mysqli_query($link,"SET SESSION collation_connection ='utf8_general_ci'");
+		$result = mysqli_query($link, $query);
+		while($row = mysqli_fetch_assoc($result)){ ?>
+										  <option value="<?php echo $row['dhan_id']; ?>"><?php echo $row['dhan_cat'];?></option>
+										 
+		 <?php } ?> </select>
 										</br>
 										<label for="cars" style="color:black">জমির একক:</label>
 						<select name="type" id="cars">
