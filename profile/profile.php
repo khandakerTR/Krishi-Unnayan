@@ -32,14 +32,17 @@ https://templatemo.com/tm-554-ocean-vibes
 </head>
 <body>
     <header class="tm-site-header">
-        <h1 class="tm-mt-0 tm-mb-15"><span class="tm-color-primary">OCEAN</span> <span class="tm-color-gray-2">vibes</span></h1>
+	<link rel = "stylesheet"
+							   type = "text/css"
+							   href = "myStyle.css" />
+        <h1 class="tm-mt-0 tm-mb-15"><span class="tm-color-primary">Profile</span> <span class="tm-color-gray-2">vibes</span></h1>
         <em class="tm-tagline tm-color-light-gray">simple and effective design</em>
     </header>
 
     <!-- Video banner 400 px height -->
     <div id="tm-video-container">
         <video autoplay muted loop id="tm-video">
-            <source src="video/ocean-sea-wave-video.mp4" type="video/mp4">
+            <source src="video/my.mp4" type="video/mp4">
         </video>  
         <i id="tm-video-control-button" class="fas fa-pause"></i>
     </div>
@@ -51,14 +54,15 @@ https://templatemo.com/tm-554-ocean-vibes
 						বার্তা পাঠান
                         <i class="fas fa-3x fa-water"></i>
                     </a>                
-                </li>
+                </li> 
+				<ul id="inline-popups">
                 <li class="tm-nav-item">
                     <a href="#gallery" data-effect="mfp-move-from-top" class="tm-nav-link" id="tm-gallery-link">
-							সারের  
+							সারের দর
                         <i class="far fa-3x fa-images"></i>
                     </a>
-                </li>
-                <li class="tm-nav-item">
+                </li></ul>
+                 <li class="tm-nav-item">
                     <a href="../editprofile.php" data-effect="mfp-move-from-top" class="tm-nav-link">
 							তথ্য পরিবর্তন
                         <i class="far fa-3x fa-smile"></i>
@@ -78,7 +82,105 @@ https://templatemo.com/tm-554-ocean-vibes
                 </li>
 
             </ul>
-        </nav>
+        </nav>        <div id="gallery" class="popup mfp-with-anim mfp-hide tm-bg-gray">
+            <a href="#" class="tm-close-popup">
+                return home
+                <i class="fas fa-times"></i>
+            </a>
+            <div class="tm-row tm-gallery-row">
+                <div class="tm-gallery">
+                    <div class="tm-gallery-container">  
+				
+                          <?php
+					$servername = "localhost";
+					$username = "root";
+					$password = "";
+					$dbname = "krishi_unnayon";
+
+					// Create connection
+					$conn = new mysqli($servername, $username, $password, $dbname);
+					$conn -> set_charset("utf8");
+					// Check connection
+					if ($conn->connect_error) {
+					  die("Connection failed: " . $conn->connect_error);
+					}
+
+					$sql = "SELECT * FROM fartilizer";
+					$result = $conn->query($sql);
+
+					if ($result->num_rows > 0) {
+					  echo "<table>
+						<thead>
+							<tr class='table100-head'>
+								<th class='column2'>সারের নাম</th>
+								<th class='column2'>সারের বর্তমান বাজার দর</th></tr></thead><tbody>";
+					  // output data of each row
+					  while($row = $result->fetch_assoc()) {
+						echo "<tr><td class='column2'>".$row["name"]."</td><td class='column2'>".$row["price"]."</td></tr>";
+					  }
+					  echo "</tbody></table>";
+					} else {
+					  echo "0 results";
+					}
+					$conn->close();
+					?>             
+									   
+									   
+									   
+									   
+                    </div>
+                </div>
+                <!-- Gallery navigation and description -->
+                <div class="tm-col tm-gallery-right">
+                    <h2 class="tm-color-primary tm-mt-35 tm-page-title">Gallery</h2>
+                    <div class="tm-gallery-right-inner">
+                        <ul class="tm-gallery-links">
+                            <li>
+                                <a href="#" class="active tm-gallery-link" data-filter="*">
+                                    <i class="fas fa-layer-group tm-gallery-link-icon"></i>
+                                    All
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tm-gallery-link" data-filter="portrait">
+                                    <i class="fas fa-portrait tm-gallery-link-icon"></i>
+                                    Portraits
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tm-gallery-link" data-filter="nature">
+                                    <i class="fas fa-leaf tm-gallery-link-icon"></i>
+                                    Nature
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tm-gallery-link" data-filter="animal">
+                                    <i class="fas fa-paw tm-gallery-link-icon"></i>
+                                    Animals
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tm-gallery-link" data-filter="building">
+                                    <i class="far fa-building tm-gallery-link-icon"></i>
+                                    Buildings
+                                </a>
+                            </li>
+                        </ul>
+                        <p>
+                            Different icons are used for
+                            different categories. There are 4 or more
+                            pages of photos in this gallery. Each
+                            thumbnail has a nice hover effect.
+                        </p>
+                        <p>
+                            Proin lacus enim, finibus sed magna a,
+                            molestie lacinia est. Maecenas id dolor
+                            lorem. Donec sodales ex velit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Popup itself -->
 

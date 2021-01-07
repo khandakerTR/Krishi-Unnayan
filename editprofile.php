@@ -1,38 +1,6 @@
 <?php
-
-
-$nm;
-$vl;
-$di;
-$ds;
-$th;
-$po;
-$ph;
-$em;
-session_start();
-include "config/config.php";
-header('Content-Type: text/html; charset=utf-8');
-$us = $_SESSION["username"]; 
-				$query = "SELECT name,village,division,district,thana,post,phone,eamil FROM   users WHERE  username = '$us' ";
-				         mysqli_query($link,'SET CHARACTER SET utf8');// for bangla 
-         mysqli_query($link,"SET SESSION collation_connection ='utf8_general_ci'");// for bangla
-				if ($result = mysqli_query($link,$query)) {
-					
-				/* fetch associative array */
-				while ($row = mysqli_fetch_assoc($result)) {
-				$nm=$row["name"];
-				$vl=$row["village"];
-				$di=$row["division"];
-				$ds=$row["district"];
-				$th=$row["thana"];
-				$po=$row["post"];
-				$ph=$row["phone"];
-				$em=$row["eamil"];
-				
-						}
-
-    mysqli_free_result($result);
-				}
+include "handleEditProfile.php";
+ 
 
 
 
@@ -136,7 +104,7 @@ $us = $_SESSION["username"];
 				
 					<div class="col-md-10 wrap-about2 align-items-centerd-flex">
 						<div class="ftco-animate bg-primary align-self-center px-4 py-5 w-100">
-						<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" accept-charset="utf-8" method="post" class="appointment-form ftco-animate">
+						<form action="handleEditProfile.php" accept-charset="utf-8" method="post" class="appointment-form ftco-animate">
 
 							<table  align="center" width="50%">  
 								  
@@ -152,7 +120,7 @@ $us = $_SESSION["username"];
 								
 								<tr>  <!-- bivagh hobe -->  
 								<td align="right" style="font-size:20px;"><font style="color:blue">বিভাগঃ</font></td>    
-								<td><input type="text"  placeholder="জেলা" name="dist" value="<?php echo $di; ?>"required></td>  
+								<td><input type="text"  placeholder="বিভাগ" name="div" value="<?php echo $di; ?>"required></td>  
 								</tr>  
 								
 								<tr>    
@@ -183,7 +151,8 @@ $us = $_SESSION["username"];
 					
 	    		
 		            <div class="form-group">
-		              <input type="submit" value="পরিবর্তন করুন" class="btn btn-secondary py-3 px-4">
+		              <input type="submit" name="submit" value="পরিবর্তন করুন" class="btn btn-secondary py-3 px-4">
+					  <a href="profile/profile.php" class="btn btn-default">Cancel</a>
 		            </div>
 		    			</form>
 							
