@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db_name = "reg";
+$db_name = "krishi_unnayon";
 $con = new mysqli($host, $user, $pass, $db_name);
 //echo "Initial character set is: " . $con -> character_set_name();
 $con -> set_charset("utf8");

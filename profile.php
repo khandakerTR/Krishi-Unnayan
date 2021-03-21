@@ -1,6 +1,6 @@
 <?php
 // Initialize the session
-include "config.php";
+include "config/config.php";
 session_start();
  
 // Check if the user is logged in, if not then redirect him to login page
@@ -9,11 +9,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
 }
-
-
-
-
-
 
 
 ?>
@@ -110,8 +105,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 				</div>
 
 	        	
-	        	<li class="nav-item"><a href="team.html" class="nav-link">বিশেষজ্ঞ</a></li>
-	        	<li class="nav-item"><a href="project.html" class="nav-link">পরামর্শ</a></li>
+	        	<li class="nav-item"><a href="team.php" class="nav-link">বিশেষজ্ঞ</a></li>
+	        	<li class="nav-item"><a href="services.php" class="nav-link">পরামর্শ</a></li>
 	        	<li class="nav-item"><a href="calculate.php" class="nav-link">সেবা</a></li>
 				<li class="nav-item"><a href="contact.html" class="nav-link">যোগাযোগ</a></li>
 		
@@ -141,17 +136,26 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			
 				<button type="button" onclick="location.href='./myinbox/index.php';" style="width:150px;height:100px;background-color:DodgerBlue"> বার্তা পাঠান</button> 
 				<button type="button" onclick="location.href='calculate.php';" style="width:150px;height:100px;background-color:DodgerBlue"> সারের পরিমাণ</button> 
-				<button type="button" onclick="location.href='calculate.php';" style="width:150px;height:100px;background-color:DodgerBlue"> তথ্য পরিবর্তন</button> 
-				<button type="button" onclick="location.href='calculate.php';" style="width:150px;height:100px;background-color:DodgerBlue"> button1</button>
-				<button type="button" onclick="location.href='calculate.php';" style="width:150px;height:100px;background-color:DodgerBlue"> button1</button> 
+				<button type="button" onclick="location.href='editprofile.php';" style="width:150px;height:100px;background-color:DodgerBlue"> তথ্য পরিবর্তন</button> 
 				<button type="button" onclick="location.href='changepassword.php';" style="width:150px;height:100px;background-color:DodgerBlue"> পাসওয়ার্ড পরিবর্তন</button> 
 				<button type="button" onclick="location.href='logout.php';" style="width:150px;height:100px;background-color:tomato"> লগ আউট</button> 
 				
-				
+				<div>
+	<marquee height="30" >বিভিন্ন প্রকার ফসলের যাবতীয় তথ্য দেখুন</marquee>
+   
+				</div>
+				<div>
+			<button type="button" onclick="location.href='dhan.php';" style="width:150px;height:100px;background-color:DodgerBlue">ধান</button>
+				<button type="button" onclick="location.href='sobji.php';" style="width:150px;height:100px;background-color:DodgerBlue">সবজি</button> 
+				<button type="button" onclick="location.href='masala.php';" style="width:150px;height:100px;background-color:DodgerBlue">মসলা</button> 
+	<button type="button" onclick="location.href='tel.php';" style="width:150px;height:100px;background-color:DodgerBlue">তেল</button> 
+	<button type="button" onclick="location.href='dal.php';" style="width:150px;height:100px;background-color:DodgerBlue">ডাল</button> 
+			</div>
 		
 				
 			</div>
-
+			
+		
 		<section class="ftco-intro ftco-no-pb img" style="background-image: url(images/bg_3.jpg);">
     	
     </footer>

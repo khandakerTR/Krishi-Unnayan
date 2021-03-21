@@ -1,7 +1,10 @@
 <?php
+
+  session_start();
 // Include config file
 require_once "config.php";
  header('Content-Type: text/html; charset=utf-8');
+ require_once "tempdata.php";
  
 $username = ""; $password = ""; $confirm_password = "";
 $username_err = "";$password_err =""; $confirm_password_err = "";
@@ -9,51 +12,75 @@ $username_err = "";$password_err =""; $confirm_password_err = "";
  $mobile = "";$mobile_err="";
 
 // Processing form data when form is submitted
-if($_SERVER["REQUEST_METHOD"] == "POST"){
- 
+$flag1=0;
+$flag2=0;
 
-	if(empty(trim($_POST["mobile"]))){
-        $mobile_err = "Please enter Your MObile Num";
-    }
-    // Validate username
-    if(empty(trim($_POST["username"])))
-	{
-        $username_err = "Please enter a username.";
-		echo $username_err;
-    } 
-	else
-	{
-		
-		$user=$_POST["username"];
-		echo $user;
-		$mob=$_POST["mobile"];
-		echo $mob;
-		$query = "SELECT username,phone FROM users WHERE username = '$user' AND '$mob' ";
-			if ($result = mysqli_query($link,$query)) 
-			{
-
-				/* fetch associative array */
-				while ($row = mysqli_fetch_assoc($result)) {
-					printf ("%s\n", $row["username"]);
-					printf ("%s\n", $row["phone"]);
-							}
-
-					mysqli_free_result($result);
-			}
-		else
-			{
-				
-             $username_err = "    This Username is not valid";
-			 echo $username_err;
-            }
-    } 
-
-            // Close statement
-  
-        
-    }
-    
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["mobile"])) {
+  $mobile_err = "Please enter Your MObile Num";
+  } else {
+   $mobile = test_input($_POST["mobile"]);
+   $_SESSION['mob']= test_input($_POST["mobile"]);
+  $flag1=1;
    
+  }
 
+  if (empty($_POST["username"])) {
+    $username_err = "Please enter a username.";
+  } else {
+    $username = test_input($_POST["username"]);
+	$_SESSION['user']= test_input($_POST["mobile"]);
+	$flag2=1;
+	
+  }
+
+
+
+
+}
+  
+
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+$database_username="";
+$database_phone="";
+  $query = "SELECT username,phone FROM   users WHERE  username = '$username' AND phone='$mobile'";
+  if ($flag1==1 && $flag2==1)
+  {
+  if ($result = mysqli_query($link,$query)) {
+	  
+	  
+	  /* fetch associative array */
+				while ($row = mysqli_fetch_assoc($result)) {
+					
+					$database_username = $row["username"];
+					$database_phone = $row["phone"];
+					
+							}
+						
+
+    mysqli_free_result($result);
+	echo $database_username ;
+	echo "</br>" ;
+	echo $database_phone ;
+	if((strcmp($database_username,$username)==0)&&(strcmp($database_phone,$mobile)==0))
+		  header("location: forgetpass.php");
+		 
+	  else{
+		   $mobile_err = "Username or MObile Number is not Valid";
+		  
+	  }
+		 
+
+	
+  
+  }
+  }
+					
 
 ?>
