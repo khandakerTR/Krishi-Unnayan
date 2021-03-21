@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 07, 2021 at 10:04 PM
+-- Generation Time: Jan 09, 2021 at 08:58 PM
 -- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.0.18
 
@@ -119,14 +119,16 @@ CREATE TABLE `crops` (
 --
 
 INSERT INTO `crops` (`id`, `name`, `description`, `crop_type`, `fertilizer`, `quantity`) VALUES
-(1, 'BR3', 'ok', 1, 'TSP : 123 , URIA : 456 , ', ''),
-(2, 'BR4', NULL, 1, NULL, ''),
+(1, 'BR3', '						  	<p>একটি উচ্চফলনশীল ধানের জাত, যা বোরো, আউশ এবং আমন তিন মৌসুমের জন্য অনুমোদিত। বাংলাদেশ ধান গবেষণা ইনস্টিটিউট ১৯৭৩ সনে জাতটি উদ্ভাবন করেছে। বিআর৩-এর জনপ্রিয় নাম বিপ্লব। \r\n						 	পুন্য বয়স্ক গাছ এর গড় উচ্চতা ৯৫ সেমি। 	চাল মাঝারি মাঝারি মোটা ও পেটে সাদা দাগ আছে ।</p>', 1, '[\"6\",\"4\",\"7\",\"8\"]', '[\"10\",\"14\",\"5\",\"15\"]'),
+(2, 'BR4', 'একটি উচ্চফলনশীল ধানের জাত, যা বোরো, আউশ এবং আমন তিন মৌসুমের জন্য অনুমোদিত। বাংলাদেশ ধান গবেষণা ইনস্টিটিউট ১৯৮৫ সনে জাতটি উদ্ভাবন করেছে। বিআর১৯-এর জনপ্রিয় নাম মঙ্গল। পুন্য বয়স্ক গাছ এর গড় উচ্চতা ১১০ সেমি।', 1, '[\"2\",\"4\",\"7\",\"9\"]', '[\"30\",\"9\",\"3\",\"12\"]'),
 (3, 'RB 28', NULL, 1, NULL, ''),
 (4, 'abcd', NULL, 2, NULL, ''),
 (5, 'absadww', NULL, 2, NULL, ''),
 (6, '??', NULL, 1, NULL, ''),
 (7, 'ফসলের', NULL, 1, NULL, ''),
-(8, 'tomato', '', 2, '[\"6\",\"4\"]', '[\"1\",\"2\"]');
+(8, 'tomato', '', 2, '[\"6\",\"4\"]', '[\"1\",\"2\"]'),
+(9, 'BR5', '<span style=\"font-family: kalpurushregular; font-size: 16px; text-align: justify;\">বর্তমানে বাংলাদেশে হাইব্রিড, উফশী ও নানা ধরনের আধুনিক জাতের ধান চাষ করা হচ্ছে।</span><br>', 1, '[\"9\",\"8\"]', '[\"5\",\"7\"]'),
+(10, 'B R 2021', '<u>asd</u> asdasd <b>asd</b>', 1, '[\"2\",\"4\",\"6\",\"9\"]', '[\"30\",\"12\",\"5\",\"4\"]');
 
 -- --------------------------------------------------------
 
@@ -206,7 +208,8 @@ INSERT INTO `fartilizer` (`id`, `name`, `price`) VALUES
 (6, 'tusar', 20.5),
 (7, 'à¦§à¦¾à¦¨', 20.5),
 (8, 'দান', 20.5),
-(9, 'টিএসপি', 20.5);
+(9, 'টিএসপি', 20.5),
+(10, 'uria', 16);
 
 -- --------------------------------------------------------
 
@@ -222,6 +225,13 @@ CREATE TABLE `feedback` (
   `message` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `feedback`
+--
+
+INSERT INTO `feedback` (`feed_id`, `name`, `email`, `subject`, `message`, `date`) VALUES
+(1, 'awd', 'khandaker3047@gmail.com', 'awd', '3434', '2021-01-08 20:47:00');
 
 -- --------------------------------------------------------
 
@@ -391,7 +401,7 @@ ALTER TABLE `chat`
 -- AUTO_INCREMENT for table `crops`
 --
 ALTER TABLE `crops`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `crops_type`
 --
@@ -406,12 +416,12 @@ ALTER TABLE `experts`
 -- AUTO_INCREMENT for table `fartilizer`
 --
 ALTER TABLE `fartilizer`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `feed_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `feed_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `products`
 --
